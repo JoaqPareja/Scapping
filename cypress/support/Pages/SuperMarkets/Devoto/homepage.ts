@@ -1,7 +1,7 @@
 import  Urls  from './urls';
 
 
-export default  class HomePage extends Urls {
+export default  class HomePageDevoto extends Urls {
     constructor(){
         super();
     }

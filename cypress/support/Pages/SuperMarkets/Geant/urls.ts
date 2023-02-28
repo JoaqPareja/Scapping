@@ -3,6 +3,6 @@ export default class Urls{
     //   urlHomepage: () =>  cy.visit('https://www.devoto.com.uy/')
     // }
     visitHomepage(){
-      cy.visit('https://www.devoto.com.uy/');
+      cy.visit('https://www.geant.com.uy/');
     }
 }
