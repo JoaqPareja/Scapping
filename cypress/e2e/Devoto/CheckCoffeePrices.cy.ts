@@ -1,11 +1,10 @@
 /// <reference types="cypress" />
 
-import {homePageDevoto} from '../support/Pages/SuperMarkets'
-let allCoffeesList;
-// let arrayCoffeeList :[string] =[];
+import {homePageDevoto} from '../../support/Pages/SuperMarkets'
+let allCoffeesList: string;
 var arrayCoffeeList :Array<string> = [];
 
-var cafeFound: string;
+var coffeeFoundOnDevoto: string;
 
 describe('Starting Web scrapping', () => {
   it('First', () => {
@@ -16,23 +15,12 @@ describe('Starting Web scrapping', () => {
     homePageDevoto.elements.eachH3Cafe().each((response: { text: () => string; })=>{
       allCoffeesList = response.text();
        arrayCoffeeList.push(allCoffeesList);
- 
     });
-   
-    cy.wrap(arrayCoffeeList).then(()=>{
-       cy.contains('descafeinado').then((response:any)=>{
-        cafeFound=response.text();
-
-        Cypress.env("cafeFound", cafeFound)
-       })
-       
-      })
-     
-      
+    cy.checkWord(arrayCoffeeList, 'molido', 'cafeFoundOnDevoto');
     })
     it('Second', ()=>{
-      var cafeNow =  Cypress.env('cafeFound')
-      cy.log(cafeNow)
+      coffeeFoundOnDevoto =  Cypress.env('cafeFoundOnDevoto')
+        cy.log(coffeeFoundOnDevoto)
     })
  
 })
