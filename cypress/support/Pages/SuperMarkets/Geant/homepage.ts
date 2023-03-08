@@ -1,32 +1,53 @@
 
 import  Urls  from './urls';
 
-
-export default  class HomePageGeant extends Urls {
+export default class HomePageGeant extends Urls {
+    productBrandArray:Array<string> =[];
+    titleProductArray:Array<string> =[]; 
+    priceProductArray:Array<string> =[]; 
+    arrayCoffeeListArray:Array<unknown> =[];
     constructor(){
-        super();
+        super();  
     }
     elements={
-        // selectPopUP: ()=> cy.get('#selec-suc-popup'),
-        // confirmarSucursalbtn: ()=> cy.get('#btnConfirmaSucursal'),
         searchInput:()=> cy.get('.styles__Input-sc-157ulfq-1 > input:nth-child(1)'),
         seeAllProducts: ()=> cy.get('.styles__ResultsContainer-sc-1skad6n-3 > .jss3'),
-        eachH3Cafe:()=> cy.get('#MasterBuscador div.Product-head > h3 > a'),
-        specificOfCoffeeSection:()=> cy.get('div.styles__ProductItem-tbq658-3:nth-child(1) > div:nth-child(3) > a:nth-child(3)'),
-        listOfallCoffee:()=> cy.get( 'div.styles__ProductItem-tbq658-3 > div:nth-child(3) > a:nth-child(3) > h2:nth-child(2)'),
-        priceOfCoffe:()=> cy.get('div:nth-child(3) > .styles__Container-tbq658-9 > .styles__Prices-tbq658-18 > .GwWDp')
+        allProductsSections:()=> cy.get('.styles__ProductList-xnd9je-0'),
+        pMarca:() => cy.get('div.styles__ProductItem-tbq658-3 > div:nth-child(3) > a:nth-child(3) > p:nth-child(1)'),
+        h2:()=> cy.get('h2'),
+        pPrice:()=> cy.get('div.styles__ProductItem-tbq658-3 > div:nth-child(3) > div:nth-child(4) > p:nth-child(1)'),
+        // let productBrandArray:Array<unknown> =[];
+        
     }
-    // selectCity(city: string | number | (string | number)[]){
-    //     this.elements.selectPopUP().select(city);
-    // }
-    // clickConfirmSucursal(){
-    //     this.elements.confirmarSucursalbtn().click();
-    // }
     clickSeeAllProducts(){
         this.elements.seeAllProducts().click();
     }
     typeSearchInput($el: string){
         this.elements.searchInput().type($el)
     }
-  
-  }
+
+    storeEachPMarca(){   
+        this.elements.pMarca().each((response: { text: () => string; })=>{
+            this.productBrandArray.push(response.text());
+        })
+    }
+    storeEachH2(){  
+        this.elements.pMarca().each((response: { text: () => string; })=>{
+            this.titleProductArray.push(response.text());
+        })
+    }
+    storeEachPPrice(){
+        this.elements.pMarca().each((response: { text: () => string; })=>{
+           this.priceProductArray.push(response.text());
+        })
+    }
+    pushIntoCoffeeListArray(){
+        this.arrayCoffeeListArray.push(this.productBrandArray)
+        this.arrayCoffeeListArray.push(this.titleProductArray)
+        this.arrayCoffeeListArray.push(this.priceProductArray)   
+    }
+   
+}
+
+
+

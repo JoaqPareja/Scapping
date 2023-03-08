@@ -15,28 +15,24 @@ describe('Get the page information',()=>{
         homePageGeant.visitHomepage();
         homePageGeant.typeSearchInput('Cafe');
         homePageGeant.clickSeeAllProducts();
+        homePageGeant.storeEachPMarca();
+        homePageGeant.storeEachH2();
+        homePageGeant.storeEachPPrice();
+        homePageGeant.pushIntoCoffeeListArray();
+        // homePageGeant.elements
+        //               .allProductsSections()
+        //                 .each(
+        //                 function(box){
+        //                     cy.wrap(box).within(function() {
+        //                         homePageGeant.storeEachPMarca();
+        //                         homePageGeant.storeEachH2();
+        //                         homePageGeant.storeEachPPrice();
+        //                         homePageGeant.pushIntoCoffeeListArray();
+        //                     })          
 
-        cy.get(allProductsSections)
-            .each(function(box){
-                cy.wrap(box).within(function() {
-                        cy.get(pMarca)
-                                .each((response: { text: () => string; })=>{
-                                    productBrandArray.push(response.text());
-                        })
-                        cy.get(h2).each((response: { text: () => string; })=>{
-                            titleProductArray.push(response.text());
-                        })
-                        cy.get(pPrice)
-                            .each((response: { text: () => string; })=>{
-                                priceProductArray.push(response.text());
-                        })
-                        arrayCoffeeListArray.push(productBrandArray)
-                        arrayCoffeeListArray.push(titleProductArray)
-                        arrayCoffeeListArray.push(priceProductArray)        
-                })          
-})
-
-})
+        //                 })
+        
+     })
 })
 
 
