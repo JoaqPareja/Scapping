@@ -5,11 +5,18 @@ declare global {
      interface Chainable {
 
        checkWord(walue1: Array<string>, value2: string, 
-        value3: string):  Chainable<JQuery<HTMLElement>>
-     }   
+                  value3: string):  Chainable<JQuery<HTMLElement>>
+
+        reCreateProduct(productBrand:Array<string>, elements:unknown, titleProduct:Array<string>, 
+          priceProduct:Array<string>, arrayCoffeeListArray:Array<string> ):  Chainable<JQuery<HTMLElement>>
+
+          readJsonProduct(jsonString:string, productBrand:Array<string>, titleProduct:Array<string>, 
+            priceProduct:Array<string>):  Chainable<JQuery<HTMLElement>>
+        }   
      
    }
 }
+
 
 
 export function checkWord(arrayOfProductList: Array<string>, productRequested:string, wordFound:string){
@@ -23,7 +30,23 @@ export function checkWord(arrayOfProductList: Array<string>, productRequested:st
     })
   }
 
+  export function reCreateProduct(productBrand:Array<string>,elements:unknown, titleProduct:Array<string>, 
+        priceProduct:Array<string>, arrayCoffeeListArray:Array<string>){
+          for (let i = 0; i < productBrand.length; i++) {
+
+            elements =  titleProduct.map(titleProduct => new Array({Marca: productBrand[i]}, {Descripcion: titleProduct}, {Precio:priceProduct[i]}))
+            // elements = JSON(elements)
+            arrayCoffeeListArray.push(elements[i]);
+          
+        }
+        
+  // cy.log('checking especific positions')
+  // cy.wrap(arrayCoffeeListArray[2]).pause();
+  }
+
 Cypress.Commands.add('checkWord', checkWord)
+Cypress.Commands.add('reCreateProduct', reCreateProduct)
+
 
 Cypress.on('uncaught:exception', (err, runnable) => {
   // returning false here prevents Cypress from
