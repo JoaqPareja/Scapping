@@ -1,39 +1,38 @@
 /// <reference types="cypress" />
+import {homePageGeant} from '../../support/Pages/SuperMarkets'
 
+let allProductsSections:string = '.styles__ProductList-xnd9je-0';
+let productBrandArray:Array<unknown> =[];
+let titleProductArray:Array<unknown> =[]; 
+let priceProductArray:Array<unknown> =[]; 
+let arrayCoffeeListArray:Array<unknown> =[];
+let pMarca =  'div.styles__ProductItem-tbq658-3 > div:nth-child(3) > a:nth-child(3) > p:nth-child(1)';
+let h2 ='h2';
+let pPrice = 'div.styles__ProductItem-tbq658-3 > div:nth-child(3) > div:nth-child(4) > p:nth-child(1)';
+describe('Get the page information',()=>{
 
-describe('Re convert products',()=>{
-const jsonProduct:string = '../fixtures/datatest.json'
-let productBrand:Array<string> =[];
-let titleProduct:Array<string> =[]; 
-let priceProduct:Array<string> =[]; 
-let arrayCoffeeListArray:Array<string> =[];
-let elements:unknown; 
-    beforeEach('Bring products',()=>{
-        cy.readFile(jsonProduct).then((str)=>{
-            productBrand = str[0];
-            titleProduct = str[1];
-            priceProduct = str[2]
-        })
-    })
-    it('Convert array',()=>{
-       
-            cy.reCreateProduct(productBrand, elements, titleProduct, priceProduct, arrayCoffeeListArray)
-            // for (let i = 0; i < productBrand.length; i++) {
+    it('Store the page information', ()=>{
+        homePageGeant.visitHomepage();
+        homePageGeant.typeSearchInput('Cafe');
+        homePageGeant.clickSeeAllProducts();
+        homePageGeant.storeEachPMarca();
+        homePageGeant.storeEachH2();
+        homePageGeant.storeEachPPrice();
+        homePageGeant.pushIntoCoffeeListArray();
+        // homePageGeant.elements
+        //               .allProductsSections()
+        //                 .each(
+        //                 function(box){
+        //                     cy.wrap(box).within(function() {
+        //                         homePageGeant.storeEachPMarca();
+        //                         homePageGeant.storeEachH2();
+        //                         homePageGeant.storeEachPPrice();
+        //                         homePageGeant.pushIntoCoffeeListArray();
+        //                     })          
 
-            //     elements =  titleProduct.map(titleProduct => new Array({Marca: productBrand[i]}, {Descripcion: titleProduct}, {Precio:priceProduct[i]}))
-            //     arrayCoffeeListArray.push(elements[i]);       
-            // }
-            // cy.log('checking especific positions')
-            // cy.wrap(arrayCoffeeListArray[0]).pause(); esto no lo toma aca
-            
-    })
-    it('Check positions of Array', ()=>{
-        cy.wrap(arrayCoffeeListArray)
-        cy.log('checking especific positions')
-        cy.wrap(arrayCoffeeListArray[0]).pause();
-        // cy.wrap(JSON.(arrayCoffeeListArray[0])).pause();
-        cy.wrap(arrayCoffeeListArray[1]).pause();
-        cy.wrap(arrayCoffeeListArray[2]).pause();
-        cy.wrap(arrayCoffeeListArray[3]).pause();
-    })
+        //                 })
+        
+     })
 })
+
+
