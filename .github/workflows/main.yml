@@ -2,8 +2,8 @@ name: Cypress NewTests
 
 on: 
   schedule:
-    - cron: '15 18 * * 1,5'
-
+    - cron: '25 18 * * 1,5'
+    - cron: '25 15 * * 1,5'
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
