@@ -21,10 +21,9 @@ let elements:unknown;
     it('Check positions of Array', ()=>{
         cy.wrap(arrayCoffeeListArray)
         cy.log('checking especific positions')
-        cy.wrap(arrayCoffeeListArray[0]).pause();
-        // cy.wrap(JSON.(arrayCoffeeListArray[0])).pause();
-        cy.wrap(arrayCoffeeListArray[1]).pause();
-        cy.wrap(arrayCoffeeListArray[2]).pause();
-        cy.wrap(arrayCoffeeListArray[3]).pause();
+        cy.wrap(arrayCoffeeListArray[0])
+        cy.wrap(arrayCoffeeListArray[1])
+        cy.wrap(arrayCoffeeListArray[2])
+        cy.wrap(arrayCoffeeListArray[3])
     })
 })
