@@ -15,17 +15,8 @@ let elements:unknown;
             priceProduct = str[2]
         })
     })
-    it('Convert array',()=>{
-       
+    it('Convert array',()=>{   
             cy.reCreateProduct(productBrand, elements, titleProduct, priceProduct, arrayCoffeeListArray)
-            // for (let i = 0; i < productBrand.length; i++) {
-
-            //     elements =  titleProduct.map(titleProduct => new Array({Marca: productBrand[i]}, {Descripcion: titleProduct}, {Precio:priceProduct[i]}))
-            //     arrayCoffeeListArray.push(elements[i]);       
-            // }
-            // cy.log('checking especific positions')
-            // cy.wrap(arrayCoffeeListArray[0]).pause(); esto no lo toma aca
-            
     })
     it('Check positions of Array', ()=>{
         cy.wrap(arrayCoffeeListArray)
