@@ -2,7 +2,7 @@
 
 
 describe('Re convert products',()=>{
-const jsonProduct:string = '../fixtures/datatest.json'
+const jsonProduct:string = '../../fixtures/datatest.json'
 let productBrand:Array<string> =[];
 let titleProduct:Array<string> =[]; 
 let priceProduct:Array<string> =[]; 
