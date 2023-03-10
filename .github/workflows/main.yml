@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: '50 20 * * 1,5'
     - cron: '00 21 * * 1,5'
-    - cron: '25 15 * * 1,5'
+    - cron: '00 22 * * 1,5'
 jobs:
    cypress-run:
     runs-on: ubuntu-22.04
