@@ -1,15 +1,16 @@
 /// <reference types="cypress" />
 
+const datatest = '../fixtures/datatest.json'
 
 describe('Re convert products',()=>{
-const jsonProduct:string = '../fixtures/datatest.json'
 let productBrand:Array<string> =[];
 let titleProduct:Array<string> =[]; 
 let priceProduct:Array<string> =[]; 
 let arrayCoffeeListArray:Array<string> =[];
 let elements:unknown; 
     beforeEach('Bring products',()=>{
-        cy.readFile(jsonProduct).then((str)=>{
+        cy.readFile(datatest).then((str)=>{
+
             productBrand = str[0];
             titleProduct = str[1];
             priceProduct = str[2]

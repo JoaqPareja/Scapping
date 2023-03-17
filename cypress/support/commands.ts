@@ -13,10 +13,20 @@ declare global {
           readJsonProduct(jsonString:string, productBrand:Array<string>, titleProduct:Array<string>, 
             priceProduct:Array<string>):  Chainable<JQuery<HTMLElement>>
         }   
-     
    }
 }
 
+export function readJsonProduct(jsonString:string, productBrand:Array<string>, 
+                  titleProduct:Array<string>,priceProduct:Array<string>){
+cy.readFile(jsonString).then((str)=>{
+
+              productBrand = str[0];
+              titleProduct = str[1];
+              priceProduct = str[2]
+              cy.wrap(productBrand).pause();
+          })
+cy.wrap(productBrand).pause();
+}
 
 
 export function checkWord(arrayOfProductList: Array<string>, productRequested:string, wordFound:string){
@@ -35,7 +45,6 @@ export function checkWord(arrayOfProductList: Array<string>, productRequested:st
           for (let i = 0; i < productBrand.length; i++) {
 
             elements =  titleProduct.map(titleProduct => new Array({Marca: productBrand[i]}, {Descripcion: titleProduct}, {Precio:priceProduct[i]}))
-            // elements = JSON(elements)
             arrayCoffeeListArray.push(elements[i]);
           
         }
@@ -45,6 +54,7 @@ export function checkWord(arrayOfProductList: Array<string>, productRequested:st
   }
 
 Cypress.Commands.add('checkWord', checkWord)
+Cypress.Commands.add('readJsonProduct', readJsonProduct)
 Cypress.Commands.add('reCreateProduct', reCreateProduct)
 
 
