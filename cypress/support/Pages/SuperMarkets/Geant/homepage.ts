@@ -1,5 +1,4 @@
 
-import { json } from 'stream/consumers';
 import  Urls  from './urls';
 
 export default class HomePageGeant extends Urls {
