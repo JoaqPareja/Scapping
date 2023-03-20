@@ -1,8 +1,9 @@
 /// <reference types="cypress" />
 
-// import datatest from ''
 
-const datatest =  '../fixtures/datatest.json'
+
+const datatest:string = Cypress.env("jsonfile")
+
 
 describe('Re convert products',()=>{
 let productBrand:Array<string> =[];

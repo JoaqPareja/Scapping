@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^12.5.1"
+    "cypress": "^12.5.1",
+    "dotenv": "^16.0.3"
   },
   "devDependencies": {
     "@types/node": "^18.14.2",

@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 import {homePageGeant} from '../../../support/Pages/SuperMarkets'
-const datatest = '../fixtures/datatest.json'
+
+const datatest = process.env.jsonFile;
 describe('Get the page information',()=>{
 
     it('Store the page information', ()=>{

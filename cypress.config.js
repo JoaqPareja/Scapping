@@ -1,3 +1,5 @@
+// import {datatest} from '../WebScrapping/cypress/fixtures/datatest.json'
+
 module.exports = {
   
   e2e: {
@@ -8,6 +10,9 @@ module.exports = {
       
       // implement node event listeners here
     },
+    env:{
+      "jsonfile": "../fixtures/datatest.json" 
+    }
     
   },
 };
