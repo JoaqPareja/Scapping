@@ -1,7 +1,6 @@
 /// <reference types="cypress" />
 import {homePageGeant} from '../../../support/Pages/SuperMarkets'
 
-
 describe('Get the page information',()=>{
 
     it('Store the page information', ()=>{
@@ -14,7 +13,4 @@ describe('Get the page information',()=>{
         homePageGeant.pushIntoCoffeeListArray();
         homePageGeant.writefile();
      })
-
 })
-
-
