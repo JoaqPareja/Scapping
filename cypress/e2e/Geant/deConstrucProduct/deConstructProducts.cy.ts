@@ -21,7 +21,7 @@ describe('Get the page information',()=>{
             cy.wrap(str[0][1]).pause()
             cy.wrap(str[1]).pause()
 
-            cy.wrap(str[0].ProductBrand).pause()
+            cy.wrap(str[0].ProductBrand)
         })
      })
 })
