@@ -9,7 +9,12 @@ let priceProduct:Array<string> =[];
 let arrayCoffeeListArray:Array<string> =[];
 let elements:unknown; 
     beforeEach('Bring products',()=>{
-        cy.readFile(datatestRaw)
+        cy.readFile(datatestRaw).then((str)=>{
+
+            productBrand = str[0];
+            titleProduct = str[1];
+            priceProduct = str[2]
+        })
     })
     it('Convert array',()=>{   
             cy.reCreateProduct(productBrand, elements, titleProduct, priceProduct, arrayCoffeeListArray)
