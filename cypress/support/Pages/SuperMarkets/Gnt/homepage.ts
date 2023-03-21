@@ -8,7 +8,7 @@ export default class HomePageGeant extends Urls {
     titleProductArray:Array<string> =[]; 
     priceProductArray:Array<string> =[]; 
     arrayCoffeeListArray:Array<unknown> =[]; ;
-    datatestGeant:string = 'cypress/fixtures/datatestGeant.json'
+    datatestGeant:string = 'cypress/fixtures/datatestRaw.json'
     constructor(){
         super();  
     }

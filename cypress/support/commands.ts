@@ -44,7 +44,7 @@ export function checkWord(arrayOfProductList: Array<string>, productRequested:st
         priceProduct:Array<string>, arrayCoffeeListArray:Array<string>){
           for (let i = 0; i < productBrand.length; i++) {
 
-            elements =  titleProduct.map(titleProduct => new Array({Marca: productBrand[i]}, {Descripcion: titleProduct}, {Precio:priceProduct[i]}))
+            elements =  titleProduct.map(titleProduct => new Array({Marca: productBrand[i], Descripcion: titleProduct, Precio:priceProduct[i]}))
             arrayCoffeeListArray.push(elements[i]);
           
         }
