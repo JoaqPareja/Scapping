@@ -8,7 +8,7 @@ declare global {
                   value3: string):  Chainable<JQuery<HTMLElement>>
 
         reCreateProduct(productBrand:Array<string>, elements:unknown, titleProduct:Array<string>, 
-          priceProduct:Array<string>, arrayCoffeeListArray:Array<string> ):  Chainable<JQuery<HTMLElement>>
+          priceProduct:Array<string>, arrayCoffeeListArray:Array<unknown> ):  Chainable<JQuery<HTMLElement>>
 
           readJsonProduct(jsonString:string, productBrand:Array<string>, titleProduct:Array<string>, 
             priceProduct:Array<string>):  Chainable<JQuery<HTMLElement>>
@@ -41,7 +41,7 @@ export function checkWord(arrayOfProductList: Array<string>, productRequested:st
   }
 
   export function reCreateProduct(productBrand:Array<string>,elements:unknown, titleProduct:Array<string>, 
-        priceProduct:Array<string>, arrayCoffeeListArray:Array<string>){
+        priceProduct:Array<string>, arrayCoffeeListArray:Array<unknown>){
           for (let i = 0; i < productBrand.length; i++) {
 
             elements =  titleProduct.map(titleProduct => new Array({Marca: productBrand[i], Descripcion: titleProduct, Precio:priceProduct[i]}))
