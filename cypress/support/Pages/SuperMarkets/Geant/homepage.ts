@@ -1,12 +1,14 @@
 
 import  Urls  from './urls';
-
+// import datest from 
+// const datatestGeant = 
+// datatest:string = '../'
 export default class HomePageGeant extends Urls {
     productBrandArray:Array<string> =[];
     titleProductArray:Array<string> =[]; 
     priceProductArray:Array<string> =[]; 
     arrayCoffeeListArray:Array<unknown> =[]; ;
-    datatest:string = '../fixtures/datatest'
+    datatestGeant:string = 'cypress/fixtures/datatestGeant.json'
     constructor(){
         super();  
     }
@@ -46,7 +48,7 @@ export default class HomePageGeant extends Urls {
        
     }
    writefile(){
-            cy.writeFile('../fixtures/datatest', this.arrayCoffeeListArray)
+            cy.writeFile(this.datatestGeant, this.arrayCoffeeListArray)
  
    }
    
