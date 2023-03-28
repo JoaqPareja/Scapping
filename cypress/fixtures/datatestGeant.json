@@ -1,212 +1,165 @@
 [
-  [
-    {
-      "Marca": "AGUILA",
-      "Descripcion": "Café instantáneo ÁGUILA 10 sticks",
-      "Precio": "$50"
-    }
-  ],
-  [
-    {
-      "Marca": "NESCAFÉ",
-      "Descripcion": "Café BRACAFÉ 170 g + regalo",
-      "Precio": "$371"
-    }
-  ],
-  [
-    {
-      "Marca": "NESCAFÉ",
-      "Descripcion": "Café NESCAFÉ tradicao 200 g",
-      "Precio": "$443"
-    }
-  ],
-  [
-    {
-      "Marca": "PRECIO LÍDER",
-      "Descripcion": "Café molido glaseado PRECIO LIDER 500 g",
-      "Precio": "$295"
-    }
-  ],
-  [
-    {
-      "Marca": "NESCAFÉ",
-      "Descripcion": "Café BRACAFÉ 170 g pack ahorro",
-      "Precio": "$307"
-    }
-  ],
-  [
-    {
-      "Marca": "EL CHANA",
-      "Descripcion": "Café molido EL CHANÁ 500 g + 100 g gratis",
-      "Precio": "$490"
-    }
-  ],
-  [
-    {
-      "Marca": "IGUAÇU",
-      "Descripcion": "Café IGUAÇU tradicional 200 g + sachet 50 g",
-      "Precio": "$363"
-    }
-  ],
-  [
-    {
-      "Marca": "NESCAFÉ",
-      "Descripcion": "Café BRACAFÉ 14 sticks",
-      "Precio": "$69"
-    }
-  ],
-  [
-    {
-      "Marca": "PRECIO LÍDER",
-      "Descripcion": "Café soluble PRECIO LÍDER clásico 10 sticks",
-      "Precio": "$30"
-    }
-  ],
-  [
-    {
-      "Marca": "NESCAFÉ",
-      "Descripcion": "Capsulas NESCAFE Dolce Gusto flat white 187 g",
-      "Precio": "$575"
-    }
-  ],
-  [
-    {
-      "Marca": "STARBUCKS",
-      "Descripcion": "Café molido STARBUCKS medium house blend 250g",
-      "Precio": "$519"
-    }
-  ],
-  [
-    {
-      "Marca": "STARBUCKS",
-      "Descripcion": "Café molido STARBUCKS medium colombia 250g",
-      "Precio": "$519"
-    }
-  ],
-  [
-    {
-      "Marca": "NESTLÉ",
-      "Descripcion": "Café NESCAFÉ Gold 100 g",
-      "Precio": "$485"
-    }
-  ],
-  [
-    {
-      "Marca": "NESCAFÉ",
-      "Descripcion": "Cafetera multibebidas NESCAFÉ Mod. Mini-me Dolce Gusto automática",
-      "Precio": "U$S 199"
-    }
-  ],
-  [
-    {
-      "Marca": "SENIOR",
-      "Descripcion": "Café SENIOR tradicional 500g",
-      "Precio": "$446"
-    }
-  ],
-  [
-    {
-      "Marca": "NESTLÉ",
-      "Descripcion": "Crema para café NESTLÉ coffee mate 170 g",
-      "Precio": "$198"
-    }
-  ],
-  [
-    {
-      "Marca": "ZAPICÁN",
-      "Descripcion": "Café molido ZAPICÁN 1 kg",
-      "Precio": "$630"
-    }
-  ],
-  [
-    {
-      "Marca": "SENIOR",
-      "Descripcion": "Café epresso grano SENIOR 1 kg",
-      "Precio": "$1.373"
-    }
-  ],
-  [
-    {
-      "Marca": "SENIOR",
-      "Descripcion": "Café soluble SENIOR 100 g",
-      "Precio": "$193"
-    }
-  ],
-  [
-    {
-      "Marca": "CABRALES",
-      "Descripcion": "Café molido CABRALES La Planta Del Café 500 g",
-      "Precio": "$273"
-    }
-  ],
-  [
-    {
-      "Marca": "EL CHANA",
-      "Descripcion": "Café molido EL CHANÁ glaseado 1 kg",
-      "Precio": "$917"
-    }
-  ],
-  [
-    {
-      "Marca": "AGUILA",
-      "Descripcion": "Café molido ÁGUILA extra azul 500 g",
-      "Precio": "$445"
-    }
-  ],
-  [
-    {
-      "Marca": "NESTLÉ",
-      "Descripcion": "Cebada Nestlé ECCO 170 g",
-      "Precio": "$258"
-    }
-  ],
-  [
-    {
-      "Marca": "PRECIO LÍDER",
-      "Descripcion": "Café soluble PRECIO LÍDER clásico 50 g",
-      "Precio": "$85"
-    }
-  ],
-  [
-    {
-      "Marca": "PRECIO LÍDER",
-      "Descripcion": "Café soluble PRECIO LÍDER clásico 170 g",
-      "Precio": "$209"
-    }
-  ],
-  [
-    {
-      "Marca": "PRECIO LÍDER",
-      "Descripcion": "Cappuccino vainilla PRECIO LÍDER 6 un",
-      "Precio": "$129"
-    }
-  ],
-  [
-    {
-      "Marca": "FLORESTAL",
-      "Descripcion": "Caramelos de café FLORESTAL 108 g",
-      "Precio": "$50"
-    }
-  ],
-  [
-    {
-      "Marca": "STARBUCKS",
-      "Descripcion": "Café molido STARBUCKS medium pike place 250g",
-      "Precio": "$519"
-    }
-  ],
-  [
-    {
-      "Marca": "NESCAFÉ",
-      "Descripcion": "Capuccino NESCAÉ Gold Double chocolate mocha",
-      "Precio": "$342"
-    }
-  ],
-  [
-    {
-      "Marca": "NESCAFÉ",
-      "Descripcion": "Pack 3x2 cápsulas NESCAFÉ Dolce Gusto espresso",
-      "Precio": "$1.150"
-    }
-  ]
+  {
+    "Marca": "PRECIO LÍDER",
+    "Descripcion": "Café molido glaseado PRECIO LIDER 500 g",
+    "NormalPrice": "$295",
+    "SantanderPrice": "$251"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Café BRACAFÉ 170 g pack ahorro",
+    "NormalPrice": "$307",
+    "SantanderPrice": "$251"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Café BRACAFÉ 14 sticks",
+    "NormalPrice": "$69",
+    "SantanderPrice": "$59"
+  },
+  {
+    "Marca": "PRECIO LÍDER",
+    "Descripcion": "Café soluble PRECIO LÍDER clásico 10 sticks",
+    "NormalPrice": "$30",
+    "SantanderPrice": "$25"
+  },
+  {
+    "Marca": "FLORESTAL",
+    "Descripcion": "Caramelos de café FLORESTAL 108 g",
+    "NormalPrice": "$50",
+    "SantanderPrice": "$40"
+  },
+  {
+    "Marca": "STARBUCKS",
+    "Descripcion": "Café molido STARBUCKS medium house blend 250g",
+    "NormalPrice": "$519",
+    "SantanderPrice": "$425"
+  },
+  {
+    "Marca": "STARBUCKS",
+    "Descripcion": "Café molido STARBUCKS medium colombia 250g",
+    "NormalPrice": "$519",
+    "SantanderPrice": "$425"
+  },
+  {
+    "Marca": "AGUILA",
+    "Descripcion": "Café molido ÁGUILA extra azul 500 g",
+    "NormalPrice": "$445",
+    "SantanderPrice": "$364"
+  },
+  {
+    "Marca": "PRECIO LÍDER",
+    "Descripcion": "Café soluble PRECIO LÍDER clásico 50 g",
+    "NormalPrice": "$85",
+    "SantanderPrice": "$75"
+  },
+  {
+    "Marca": "PRECIO LÍDER",
+    "Descripcion": "Café soluble PRECIO LÍDER clásico 170 g",
+    "NormalPrice": "$209",
+    "SantanderPrice": "$195"
+  },
+  {
+    "Marca": "PRECIO LÍDER",
+    "Descripcion": "Cappuccino vainilla PRECIO LÍDER 6 un",
+    "NormalPrice": "$129",
+    "SantanderPrice": "$109"
+  },
+  {
+    "Marca": "PRECIO LÍDER",
+    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
+    "NormalPrice": "$129",
+    "SantanderPrice": "$109"
+  },
+  {
+    "Marca": "PRECIO LÍDER",
+    "Descripcion": "Café molido glaseado PRECIO LÍDER 250 g",
+    "NormalPrice": "$169",
+    "SantanderPrice": "$144"
+  },
+  {
+    "Marca": "AGUILA",
+    "Descripcion": "Café instantáneo ÁGUILA 10 sticks",
+    "NormalPrice": "$50"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Café BRACAFÉ 170 g + regalo",
+    "NormalPrice": "$371"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Café NESCAFÉ tradicao 200 g",
+    "NormalPrice": "$443"
+  },
+  {
+    "Marca": "EL CHANA",
+    "Descripcion": "Café molido EL CHANÁ 500 g + 100 g gratis",
+    "NormalPrice": "$490"
+  },
+  {
+    "Marca": "MELITTA",
+    "Descripcion": "Papel filtro Nº 4MELITTA",
+    "NormalPrice": "$139"
+  },
+  {
+    "Marca": "IGUAÇU",
+    "Descripcion": "Café IGUAÇU tradicional 200 g + sachet 50 g",
+    "NormalPrice": "$363"
+  },
+  {
+    "Marca": "NESTLÉ",
+    "Descripcion": "Café NESCAFÉ Gold 100 g",
+    "NormalPrice": "$485"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Cafetera multibebidas NESCAFÉ Mod. Mini-me Dolce Gusto automática",
+    "NormalPrice": "U$S 199"
+  },
+  {
+    "Marca": "SENIOR",
+    "Descripcion": "Café SENIOR tradicional 500g",
+    "NormalPrice": "$446"
+  },
+  {
+    "Marca": "NESTLÉ",
+    "Descripcion": "Crema para café NESTLÉ coffee mate 170 g",
+    "NormalPrice": "$198"
+  },
+  {
+    "Marca": "SENIOR",
+    "Descripcion": "Café epresso grano SENIOR 1 kg",
+    "NormalPrice": "$1.373"
+  },
+  {
+    "Marca": "SENIOR",
+    "Descripcion": "Café soluble SENIOR 100 g",
+    "NormalPrice": "$193"
+  },
+  {
+    "Marca": "CABRALES",
+    "Descripcion": "Café molido CABRALES La Planta Del Café 500 g",
+    "NormalPrice": "$369"
+  },
+  {
+    "Marca": "EL CHANA",
+    "Descripcion": "Café molido EL CHANÁ glaseado 1 kg",
+    "NormalPrice": "$917"
+  },
+  {
+    "Marca": "NESTLÉ",
+    "Descripcion": "Cebada Nestlé ECCO 170 g",
+    "NormalPrice": "$258"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Capsulas NESCAFE Dolce Gusto flat white 187 g",
+    "NormalPrice": "$575"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Cafetera multibebidas NESCAFÉ Piccolo XS Dolce Gusto",
+    "NormalPrice": "U$S 162U$S 129"
+  }
 ]

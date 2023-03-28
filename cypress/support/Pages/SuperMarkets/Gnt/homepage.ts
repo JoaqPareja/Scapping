@@ -1,25 +1,26 @@
-
 import  Urls  from './urls';
-// import datest from 
-// const datatestGeant = 
-// datatest:string = '../'
+let arrsss:unknown
 export default class HomePageGeant extends Urls {
-    productBrandArray:Array<string> =[];
-    titleProductArray:Array<string> =[]; 
-    priceProductArray:Array<string> =[]; 
+    productBrand:Array<unknown> =[];
+    titleProduct:Array<unknown> =[]; 
+    priceProduct:Array<unknown> =[]; 
     arrayCoffeeListArray:Array<unknown> =[]; ;
-    datatestGeant:string = 'cypress/fixtures/datatestRaw.json'
+    datatestRawGeant:string = 'cypress/fixtures/datatestRaw.json'
+    tryElement:unknown; 
     constructor(){
         super();  
     }
     elements={
+        eachBox:()=> cy.get('div.styles__ProductItem-tbq658-3 > div:nth-child(3)'),
         searchInput:()=> cy.get('.styles__Input-sc-157ulfq-1 > input:nth-child(1)'),
         seeAllProducts: ()=> cy.get('.styles__ResultsContainer-sc-1skad6n-3 > .jss3'),
         allProductsSections:()=> cy.get('.styles__ProductList-xnd9je-0'),
         pMarca:() => cy.get('div.styles__ProductItem-tbq658-3 > div:nth-child(3) > a:nth-child(3) > p:nth-child(1)'),
         h2:()=> cy.get('h2'),
         pPrice:()=> cy.get('div.styles__ProductItem-tbq658-3 > div:nth-child(3) > div:nth-child(4) > p:nth-child(1)'),
-        
+        imgSantander:()=> cy.get('div.styles__ProductItem-tbq658-3 > div:nth-child(3) > div:nth-child(4) > div:nth-child(2) > div:nth-child(2) > img:nth-child(1)'),
+        pPriceSantander:()=> cy.get('div.styles__ProductItem-tbq658-3 > div:nth-child(3) > div:nth-child(4) > div:nth-child(2) > p:nth-child(1)'),
+        secondPPriceSantander:()=> cy.get('div.styles__ProductItem-tbq658-3 > div:nth-child(3) > div:nth-child(4) > div:nth-child(3) > p:nth-child(1)')
     }
     clickSeeAllProducts(){
         this.elements.seeAllProducts().click();
@@ -27,32 +28,25 @@ export default class HomePageGeant extends Urls {
     typeSearchInput($el: string){
         this.elements.searchInput().type($el)
     }
-
-    storeEachPMarca(){   
-        this.elements.pMarca().each((response: { text: () => string; })=>{
-            this.productBrandArray.push(response.text());          
+    storeProducts(){
+        this.elements.eachBox().each(($el)=>{
+            cy.wrap($el).within(($element)=>{
+                cy.wrap($element).find('a > p').then((response: { text: () => string;})=>{
+                    this.productBrand.push(response.text())       
+            })
+            cy.wrap($element).find('a > h2').then((response: { text: () => string;})=>{
+                this.titleProduct.push( response.text())
+            })
+            cy.wrap($element).find('div > p').then((response: { text: () => string;})=>{
+                this.priceProduct.push(response.text())
+            })  
         })
-    }
-    storeEachH2(){  
-        this.elements.h2().each((response: { text: () => string; })=>{
-            this.titleProductArray.push(response.text());
-        })
-    }
-    storeEachPPrice(){
-        this.elements.pPrice().each((response: { text: () => string; })=>{
-        this.priceProductArray.push(response.text());
-        })
-    }
-    pushIntoCoffeeListArray(){
-        this.arrayCoffeeListArray.push(this.productBrandArray, this.titleProductArray, this.priceProductArray)
-       
-    }
-   writefile(){
-            cy.writeFile(this.datatestGeant, this.arrayCoffeeListArray)
- 
-   }
-   
-}
+    });
+            return  this.arrayCoffeeListArray.push( this.productBrand, this.titleProduct, this.priceProduct)
+}   
+        writefile(){
+            cy.writeFile(this.datatestRawGeant, this.arrayCoffeeListArray)
 
-
-
+        }
+    }
+    
