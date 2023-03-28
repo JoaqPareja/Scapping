@@ -1,83 +1,5 @@
 [
   {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Café molido glaseado PRECIO LIDER 500 g",
-    "NormalPrice": "$295",
-    "SantanderPrice": "$251"
-  },
-  {
-    "Marca": "NESCAFÉ",
-    "Descripcion": "Café BRACAFÉ 170 g pack ahorro",
-    "NormalPrice": "$307",
-    "SantanderPrice": "$251"
-  },
-  {
-    "Marca": "NESCAFÉ",
-    "Descripcion": "Café BRACAFÉ 14 sticks",
-    "NormalPrice": "$69",
-    "SantanderPrice": "$59"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Café soluble PRECIO LÍDER clásico 10 sticks",
-    "NormalPrice": "$30",
-    "SantanderPrice": "$25"
-  },
-  {
-    "Marca": "FLORESTAL",
-    "Descripcion": "Caramelos de café FLORESTAL 108 g",
-    "NormalPrice": "$50",
-    "SantanderPrice": "$40"
-  },
-  {
-    "Marca": "STARBUCKS",
-    "Descripcion": "Café molido STARBUCKS medium house blend 250g",
-    "NormalPrice": "$519",
-    "SantanderPrice": "$425"
-  },
-  {
-    "Marca": "STARBUCKS",
-    "Descripcion": "Café molido STARBUCKS medium colombia 250g",
-    "NormalPrice": "$519",
-    "SantanderPrice": "$425"
-  },
-  {
-    "Marca": "AGUILA",
-    "Descripcion": "Café molido ÁGUILA extra azul 500 g",
-    "NormalPrice": "$445",
-    "SantanderPrice": "$364"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Café soluble PRECIO LÍDER clásico 50 g",
-    "NormalPrice": "$85",
-    "SantanderPrice": "$75"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Café soluble PRECIO LÍDER clásico 170 g",
-    "NormalPrice": "$209",
-    "SantanderPrice": "$195"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino vainilla PRECIO LÍDER 6 un",
-    "NormalPrice": "$129",
-    "SantanderPrice": "$109"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$129",
-    "SantanderPrice": "$109"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Café molido glaseado PRECIO LÍDER 250 g",
-    "NormalPrice": "$169",
-    "SantanderPrice": "$144"
-  },
-  {
     "Marca": "AGUILA",
     "Descripcion": "Café instantáneo ÁGUILA 10 sticks",
     "NormalPrice": "$50"
@@ -158,8 +80,87 @@
     "NormalPrice": "$575"
   },
   {
+    "Marca": "PRECIO LÍDER",
+    "Descripcion": "Café molido glaseado PRECIO LIDER 500 g",
+    "NormalPrice": "$295",
+    "SantanderPrice": "$251"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Café BRACAFÉ 170 g pack ahorro",
+    "NormalPrice": "$307",
+    "SantanderPrice": "$251"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Café BRACAFÉ 14 sticks",
+    "NormalPrice": "$69",
+    "SantanderPrice": "$59"
+  },
+  {
+    "Marca": "PRECIO LÍDER",
+    "Descripcion": "Café soluble PRECIO LÍDER clásico 10 sticks",
+    "NormalPrice": "$30",
+    "SantanderPrice": "$25"
+  },
+  {
+    "Marca": "FLORESTAL",
+    "Descripcion": "Caramelos de café FLORESTAL 108 g",
+    "NormalPrice": "$50",
+    "SantanderPrice": "$40"
+  },
+  {
+    "Marca": "STARBUCKS",
+    "Descripcion": "Café molido STARBUCKS medium house blend 250g",
+    "NormalPrice": "$519",
+    "SantanderPrice": "$425"
+  },
+  {
+    "Marca": "STARBUCKS",
+    "Descripcion": "Café molido STARBUCKS medium colombia 250g",
+    "NormalPrice": "$519",
+    "SantanderPrice": "$425"
+  },
+  {
+    "Marca": "AGUILA",
+    "Descripcion": "Café molido ÁGUILA extra azul 500 g",
+    "NormalPrice": "$445",
+    "SantanderPrice": "$364"
+  },
+  {
+    "Marca": "PRECIO LÍDER",
+    "Descripcion": "Café soluble PRECIO LÍDER clásico 50 g",
+    "NormalPrice": "$85",
+    "SantanderPrice": "$75"
+  },
+  {
+    "Marca": "PRECIO LÍDER",
+    "Descripcion": "Café soluble PRECIO LÍDER clásico 170 g",
+    "NormalPrice": "$209",
+    "SantanderPrice": "$195"
+  },
+  {
+    "Marca": "PRECIO LÍDER",
+    "Descripcion": "Cappuccino vainilla PRECIO LÍDER 6 un",
+    "NormalPrice": "$129",
+    "SantanderPrice": "$109"
+  },
+  {
+    "Marca": "PRECIO LÍDER",
+    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
+    "NormalPrice": "$129",
+    "SantanderPrice": "$109"
+  },
+  {
+    "Marca": "PRECIO LÍDER",
+    "Descripcion": "Café molido glaseado PRECIO LÍDER 250 g",
+    "NormalPrice": "$169",
+    "SantanderPrice": "$144"
+  },
+  {
     "Marca": "NESCAFÉ",
     "Descripcion": "Cafetera multibebidas NESCAFÉ Piccolo XS Dolce Gusto",
-    "NormalPrice": "U$S 162U$S 129"
+    "NormalPrice": "U$S 162",
+    "SantanderPrice": "U$S 129"
   }
 ]

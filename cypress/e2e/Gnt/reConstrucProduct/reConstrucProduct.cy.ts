@@ -7,6 +7,7 @@ let titleProduct:Array<string> =[];
 let priceProduct:Array<any> =[]; 
 let arrayCoffeeListArray:Array<any> =[];
 let arrayOfPrecios:Array<any> =[];
+let arrayOfUSDPrecios:Array<any> =[];
 let normalArr:Array<any>=[];
 let elements:any; 
 let newArrayCoffeeListArray:Array<any> =[];
@@ -28,7 +29,7 @@ let newArrayCoffeeListArray:Array<any> =[];
         it('convert array of normal prices and santander prices',()=>{
             for (let index = 0; index < arrayCoffeeListArray.length; index++) {
                 let element:any = arrayCoffeeListArray[index];
-                if(element[0].Precio.charAt(3) && element[0].Precio.charAt(3) === '$'  || element[0].Precio.charAt(4) === '$'){
+                if(element[0].Precio.charAt(3) && element[0].Precio.charAt(3) === '$'  || element[0].Precio.charAt(4) === '$' ){
                     elements = element[0].Precio.split('$')
                     cy.wrap(elements).then((txt)=>{
                         arrayOfPrecios.push({Marca:element[0].Marca, Descripcion: element[0].Descripcion, NormalPrice:'$'+txt[1], SantanderPrice: '$'+txt[2]})
@@ -37,51 +38,78 @@ let newArrayCoffeeListArray:Array<any> =[];
             }
         })
         it('Check normal and santander prices',()=>{
-            cy.log('modifications')
-            cy.log('lets whattt hapeneded')
-            cy.wrap(arrayOfPrecios)
-            cy.wrap(arrayOfPrecios[0])
-            cy.wrap(arrayOfPrecios[0].Marca)
-            cy.wrap(arrayOfPrecios[0].Descripcion)
-            cy.wrap(arrayOfPrecios[0].NormalPrice)
-            cy.wrap(arrayOfPrecios[0].SantanderPrice)
+            cy.wrap(arrayOfPrecios).each((txt:any)=>{
+                cy.wrap(txt).should('not.be.empty');
+                cy.wrap(txt.Marca).should('not.be.empty');
+                cy.wrap(txt.Marca).should('not.contain', '1234567890!@#$%^&*()_+=')
+                cy.wrap(txt.Descripcion).should('not.be.empty');
+                cy.wrap(txt.NormalPrice).should('not.be.empty');
+                cy.wrap(txt.NormalPrice).should('not.contain', 'abcdefghijklmnñopqrstuvwxyz')
+                cy.wrap(txt.SantanderPrice).should('not.be.empty');
+                cy.wrap(txt.SantanderPrice).should('not.contain', 'abcdefghijklmnñopqrstuvwxyz')
+            })
         })
-        it('get the normal prices',()=>{
+        it('Get the USD prices', ()=>{
             for (let index = 0; index < arrayCoffeeListArray.length; index++) {
                 let element:any = arrayCoffeeListArray[index];
-                    if(element[0].Precio.charAt(3) !== '$' && element[0].Precio.charAt(4) !== '$'  ){                    
+                if(element[0].Precio.charAt(7) == 'U'){
+                    elements = element[0].Precio.split('U');
+                    cy.wrap(elements).then((txt)=>{
+                    arrayOfUSDPrecios.push({Marca:element[0].Marca, Descripcion: element[0].Descripcion, NormalPrice:'U'+txt[1], SantanderPrice:'U'+txt[2]})
+                })
+            }
+        }
+        })
+        it('Check USD prices',()=>{
+            cy.wrap(arrayOfUSDPrecios).each((txt:any)=>{
+                cy.wrap(txt).should('not.be.empty');
+                cy.wrap(txt.Marca).should('not.be.empty');
+                cy.wrap(txt.Marca).should('not.contain', '1234567890!@#$%^&*()_+=')
+                cy.wrap(txt.Descripcion).should('not.be.empty');
+                cy.wrap(txt.NormalPrice).should('not.be.empty');
+                cy.wrap(txt.NormalPrice).should('not.contain', 'abcdefghijklmnñopqrstuvwxyz')
+                cy.wrap(txt.SantanderPrice).should('not.be.empty');
+                cy.wrap(txt.SantanderPrice).should('not.contain', 'abcdefghijklmnñopqrstuvwxyz')
+            })
+
+        })
+        it('get the normal prices and Check the normal prices',()=>{
+            for (let index = 0; index < arrayCoffeeListArray.length; index++) {
+                let element:any = arrayCoffeeListArray[index];
+                    if(element[0].Precio.charAt(3) !== '$' && element[0].Precio.charAt(4) !== '$' && element[0].Precio.charAt(7) !== 'U' ){                    
                             normalArr.push({Marca:element[0].Marca, Descripcion: element[0].Descripcion, NormalPrice:element[0].Precio})
                         }
             }
-            cy.wrap(normalArr)
-            cy.wrap(normalArr[0].Marca)
-            cy.wrap(normalArr[0].Descripcion)
-            cy.wrap(normalArr[0].NormalPrice)
-            cy.wrap(normalArr[10].Marca)
-            cy.wrap(normalArr[10].Descripcion)
-            cy.wrap(normalArr[10].NormalPrice)
+            cy.wrap(normalArr).each((txt:any)=>{
+                cy.wrap(txt).should('not.be.empty');
+                cy.wrap(txt.Marca).should('not.be.empty');
+                cy.wrap(txt.Marca).should('not.contain', '1234567890!@#$%^&*()_+=')
+                cy.wrap(txt.Descripcion).should('not.be.empty');
+                cy.wrap(txt.NormalPrice).should('not.be.empty');
+                cy.wrap(txt.NormalPrice).should('not.contain', 'abcdefghijklmnñopqrstuvwxyz')
+            })
         })
         it('Concat both arrays and check them', ()=>{
-            newArrayCoffeeListArray =  newArrayCoffeeListArray.concat(arrayOfPrecios, normalArr)
+            newArrayCoffeeListArray =  newArrayCoffeeListArray.concat(normalArr,arrayOfPrecios,arrayOfUSDPrecios)
             console.log(newArrayCoffeeListArray)
-            cy.wrap(newArrayCoffeeListArray[0].Marca).should('not.be.empty');
-            cy.wrap(newArrayCoffeeListArray[0].Marca).should('not.contain', '1234567890!@#$%^&*()_+=')
-            cy.wrap(newArrayCoffeeListArray[0].Descripcion).should('not.be.empty');
-            cy.wrap(newArrayCoffeeListArray[0].NormalPrice).should('not.be.empty');
-            cy.wrap(newArrayCoffeeListArray[0].NormalPrice).should('not.contain', 'abcdefghijklmnñopqrstuvwxyz')
-            cy.wrap(newArrayCoffeeListArray[0].SantanderPrice).should('not.be.empty');
-            cy.wrap(newArrayCoffeeListArray[0].SantanderPrice).should('not.contain', 'abcdefghijklmnñopqrstuvwxyz')
-            cy.wrap(newArrayCoffeeListArray[13].Marca).should('not.be.empty');
-            cy.wrap(newArrayCoffeeListArray[13].Marca).should('not.contain', '1234567890!@#$%^&*()_+=')
-            cy.wrap(newArrayCoffeeListArray[13].Descripcion).should('not.be.empty');
-            cy.wrap(newArrayCoffeeListArray[13].NormalPrice).should('not.contain', 'abcdefghijklmnñopqrstuvwxyz')
+            cy.wrap(newArrayCoffeeListArray).each((txt:any)=>{
+                cy.wrap(txt).should('not.be.empty');
+                cy.wrap(txt.Marca).should('not.be.empty');
+                cy.wrap(txt.Marca).should('not.contain', '1234567890!@#$%^&*()_+=')
+                cy.wrap(txt.Descripcion).should('not.be.empty');
+                cy.wrap(txt.NormalPrice).should('not.be.empty');
+                cy.wrap(txt.NormalPrice).should('not.contain', 'abcdefghijklmnñopqrstuvwxyz')
+                if(txt.SantanderPrice){
+                    cy.log('santander price exist')
+                    cy.wrap(txt.SantanderPrice).should('not.be.empty');
+                    cy.wrap(txt.SantanderPrice).should('not.contain', 'abcdefghijklmnñopqrstuvwxyz')
+                }
+            })
         })
- 
     it('push into new Json',()=>{
         cy.writeFile(datatestGeant, newArrayCoffeeListArray)
            cy.readFile(datatestGeant).then((str)=>{
-           cy.wrap(str).should('not.be.empty')
-          
+           cy.wrap(str).should('not.be.empty')         
        })
     })
 })
