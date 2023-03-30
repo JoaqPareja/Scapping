@@ -1,14 +1,18 @@
 /// <reference types="cypress" />
-import {homePageGeant} from '../../../support/Pages/SuperMarkets'
+import {homePageGeant, deConstructCoffePage} from '../../../support/Pages/SuperMarkets'
 
 describe('Get the page information',()=>{
     it('Store the page boxes information', ()=>{
         homePageGeant.visitHomepage();
-        homePageGeant.typeSearchInput('Cafe');
-        homePageGeant.clickSeeAllProducts();
-        homePageGeant.storeProducts();
-        // homePageGeant.checkArray();
-        homePageGeant.writefile(); 
+        cy.url().should('eq', 'https://www.geant.com.uy/')
+        homePageGeant.typeSearchInput('Cafe');  
+        homePageGeant.clickSeeAllProducts();   
+    })
+    it('Store Coffee products', ()=>{
+        deConstructCoffePage.coffePage();
+        cy.url().should('include', 'cafe')
+        deConstructCoffePage.storeProducts();
+        deConstructCoffePage.writefile(); 
     })
 
 })

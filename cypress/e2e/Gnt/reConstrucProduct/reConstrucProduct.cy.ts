@@ -1,44 +1,20 @@
 /// <reference types="cypress" />
+import {reConstructCoffePage} from '../../../support/Pages/SuperMarkets'
+
 describe('Re convert products',()=>{
-const datatestRaw:string = "cypress/fixtures/datatestRaw.json" 
-const datatestGeant:string = "cypress/fixtures/datatestGeant.json" 
-let productBrand:Array<string> =[];
-let titleProduct:Array<string> =[]; 
-let priceProduct:Array<any> =[]; 
-let arrayCoffeeListArray:Array<any> =[];
-let arrayOfPrecios:Array<any> =[];
-let arrayOfUSDPrecios:Array<any> =[];
-let normalArr:Array<any>=[];
-let elements:any; 
-let newArrayCoffeeListArray:Array<any> =[];
     beforeEach('Bring products',()=>{
-        cy.readFile(datatestRaw).then((str)=>{
-            cy.wrap(str).should('not.be.empty');
-            productBrand = str[0]
-            cy.wrap(productBrand).should('not.be.empty');
-            titleProduct = str[1]
-            cy.wrap(titleProduct).should('not.be.empty');
-            priceProduct = str[2]
-            cy.wrap(priceProduct).should('not.be.empty');
-        })
+        reConstructCoffePage.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
     })
     it('Convert array',()=>{ 
-            cy.reCreateProduct(productBrand, elements, titleProduct, priceProduct, arrayCoffeeListArray)
-            cy.wrap(arrayCoffeeListArray).should('not.be.empty')
+            cy.reCreateProduct(reConstructCoffePage.productBrand, reConstructCoffePage.elements, reConstructCoffePage.titleProduct, 
+                                reConstructCoffePage.priceProduct, reConstructCoffePage.arrayCoffeeListArray)
+            cy.wrap(reConstructCoffePage.arrayCoffeeListArray).should('not.be.empty')
         })
         it('convert array of normal prices and santander prices',()=>{
-            for (let index = 0; index < arrayCoffeeListArray.length; index++) {
-                let element:any = arrayCoffeeListArray[index];
-                if(element[0].Precio.charAt(3) && element[0].Precio.charAt(3) === '$'  || element[0].Precio.charAt(4) === '$' ){
-                    elements = element[0].Precio.split('$')
-                    cy.wrap(elements).then((txt)=>{
-                        arrayOfPrecios.push({Marca:element[0].Marca, Descripcion: element[0].Descripcion, NormalPrice:'$'+txt[1], SantanderPrice: '$'+txt[2]})
-                    })
-                }     
-            }
+            reConstructCoffePage.createArrNormalAndSantanderPrices();
         })
         it('Check normal and santander prices',()=>{
-            cy.wrap(arrayOfPrecios).each((txt:any)=>{
+            cy.wrap(reConstructCoffePage.arrayOfPrecios).each((txt:any)=>{
                 cy.wrap(txt).should('not.be.empty');
                 cy.wrap(txt.Marca).should('not.be.empty');
                 cy.wrap(txt.Marca).should('not.contain', '1234567890!@#$%^&*()_+=')
@@ -50,18 +26,10 @@ let newArrayCoffeeListArray:Array<any> =[];
             })
         })
         it('Get the USD prices', ()=>{
-            for (let index = 0; index < arrayCoffeeListArray.length; index++) {
-                let element:any = arrayCoffeeListArray[index];
-                if(element[0].Precio.charAt(7) == 'U'){
-                    elements = element[0].Precio.split('U');
-                    cy.wrap(elements).then((txt)=>{
-                    arrayOfUSDPrecios.push({Marca:element[0].Marca, Descripcion: element[0].Descripcion, NormalPrice:'U'+txt[1], SantanderPrice:'U'+txt[2]})
-                })
-            }
-        }
+            reConstructCoffePage.createUSDPrices();
         })
         it('Check USD prices',()=>{
-            cy.wrap(arrayOfUSDPrecios).each((txt:any)=>{
+            cy.wrap(reConstructCoffePage.arrayOfUSDPrecios).each((txt:any)=>{
                 cy.wrap(txt).should('not.be.empty');
                 cy.wrap(txt.Marca).should('not.be.empty');
                 cy.wrap(txt.Marca).should('not.contain', '1234567890!@#$%^&*()_+=')
@@ -73,14 +41,9 @@ let newArrayCoffeeListArray:Array<any> =[];
             })
 
         })
-        it('get the normal prices and Check the normal prices',()=>{
-            for (let index = 0; index < arrayCoffeeListArray.length; index++) {
-                let element:any = arrayCoffeeListArray[index];
-                    if(element[0].Precio.charAt(3) !== '$' && element[0].Precio.charAt(4) !== '$' && element[0].Precio.charAt(7) !== 'U' ){                    
-                            normalArr.push({Marca:element[0].Marca, Descripcion: element[0].Descripcion, NormalPrice:element[0].Precio})
-                        }
-            }
-            cy.wrap(normalArr).each((txt:any)=>{
+        it('get the only normal prices',()=>{
+            reConstructCoffePage.createNormalPrices();
+            cy.wrap(reConstructCoffePage.normalArr).each((txt:any)=>{
                 cy.wrap(txt).should('not.be.empty');
                 cy.wrap(txt.Marca).should('not.be.empty');
                 cy.wrap(txt.Marca).should('not.contain', '1234567890!@#$%^&*()_+=')
@@ -90,9 +53,8 @@ let newArrayCoffeeListArray:Array<any> =[];
             })
         })
         it('Concat both arrays and check them', ()=>{
-            newArrayCoffeeListArray =  newArrayCoffeeListArray.concat(normalArr,arrayOfPrecios,arrayOfUSDPrecios)
-            console.log(newArrayCoffeeListArray)
-            cy.wrap(newArrayCoffeeListArray).each((txt:any)=>{
+            reConstructCoffePage.unifyArrays()
+            cy.wrap(reConstructCoffePage.newArrayCoffeeListArray).each((txt:any)=>{
                 cy.wrap(txt).should('not.be.empty');
                 cy.wrap(txt.Marca).should('not.be.empty');
                 cy.wrap(txt.Marca).should('not.contain', '1234567890!@#$%^&*()_+=')
@@ -107,9 +69,6 @@ let newArrayCoffeeListArray:Array<any> =[];
             })
         })
     it('push into new Json',()=>{
-        cy.writeFile(datatestGeant, newArrayCoffeeListArray)
-           cy.readFile(datatestGeant).then((str)=>{
-           cy.wrap(str).should('not.be.empty')         
-       })
+        reConstructCoffePage.pushJson('not.be.empty')
     })
 })
