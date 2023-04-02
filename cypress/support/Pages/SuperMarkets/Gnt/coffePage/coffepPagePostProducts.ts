@@ -37,12 +37,8 @@ export default class ReConstructCoffePage {
                     // cy.wrap(str).pause()
                     // console.log(str)
                    
-                    this.arrayOfPrecios.push(tempElement[0]);
-                    // this.arrayOfPrecios.toString()
-                    // cy.log(this.arrayOfPrecios.toString())
-                    // cy.wrap(this.arrayOfPrecios).pause();
-                    // cy.wrap(this.arrayOfPrecios[0]).pause();
-                    // cy.wrap(this.arrayOfPrecios[0].Marca).pause();
+                    this.arrayOfPrecios.push(tempElement[0][0]); 
+                    // Le digo que empuje la posicionion [0][0] ya que en esta estoy accediendo dentro de ambos corchetes creados asi solo empujo el corchete '{}'
                 })              
             }     
         }
@@ -68,13 +64,12 @@ export default class ReConstructCoffePage {
         }
     }
     unifyArrays(){
-        this.newArrayCoffeeListArray =  this.newArrayCoffeeListArray.concat(this.normalArr, JSON.stringify(this.arrayOfPrecios),this.arrayOfUSDPrecios)
+        this.newArrayCoffeeListArray =  this.newArrayCoffeeListArray.concat(this.normalArr, this.arrayOfPrecios,this.arrayOfUSDPrecios)
     }
     pushJson(Asseertion1:string){
         cy.writeFile(this.datatestGeant, this.newArrayCoffeeListArray)
            cy.readFile(this.datatestGeant).each((str:any)=>{
            cy.wrap(str).should(Asseertion1) 
-        //    cy.wrap(str.Marca).pause();
            cy.wrap(str.Marca).should(Asseertion1)          
            cy.wrap(str.Descripcion).should(Asseertion1) 
            cy.wrap(str.NormalPrice).should(Asseertion1) 
