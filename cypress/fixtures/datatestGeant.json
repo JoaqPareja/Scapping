@@ -1,181 +1,103 @@
 [
   {
+    "Marca": "AGUILA",
+    "Descripcion": "Café instantáneo ÁGUILA 10 sticks",
+    "NormalPrice": "$50"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Café BRACAFÉ 170 g + regalo",
+    "NormalPrice": "$371"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Café NESCAFÉ tradicao 200 g",
+    "NormalPrice": "$443"
+  },
+  {
+    "Marca": "EL CHANA",
+    "Descripcion": "Café molido EL CHANÁ 500 g + 100 g gratis",
+    "NormalPrice": "$490"
+  },
+  {
+    "Marca": "IGUAÇU",
+    "Descripcion": "Café IGUAÇU tradicional 200 g + sachet 50 g",
+    "NormalPrice": "$363"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Capsulas NESCAFE Dolce Gusto flat white 187 g",
+    "NormalPrice": "$575"
+  },
+  {
+    "Marca": "MELITTA",
+    "Descripcion": "Papel filtro Nº 4MELITTA",
+    "NormalPrice": "$139"
+  },
+  {
+    "Marca": "BRIGITTA",
+    "Descripcion": "Papel filtro Nº 4 BRIGITTA 30 un.",
+    "NormalPrice": "$129"
+  },
+  {
+    "Marca": "NESTLÉ",
+    "Descripcion": "Café NESCAFÉ Gold 100 g",
+    "NormalPrice": "$485"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Cafetera multibebidas NESCAFÉ Mod. Mini-me Dolce Gusto automática",
+    "NormalPrice": "U$S 199"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Café NESCAFÉ original extra fuerte + 50 g Regalo",
+    "NormalPrice": "$443"
+  },
+  {
+    "Marca": "SENIOR",
+    "Descripcion": "Café SENIOR tradicional 500g",
+    "NormalPrice": "$446"
+  },
+  {
+    "Marca": "PELE",
+    "Descripcion": "Café instantáneo PELÉ 100 g",
+    "NormalPrice": "$125"
+  },
+  {
+    "Marca": "NESTLÉ",
+    "Descripcion": "Crema para café NESTLÉ coffee mate 170 g",
+    "NormalPrice": "$198"
+  },
+  {
     "Marca": "SENIOR",
     "Descripcion": "Café epresso grano SENIOR 1 kg",
-    "NormalPrice": "$1.373$1.167"
+    "NormalPrice": "$1.373"
   },
   {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$50",
-    "SantanderPrice": "$43"
+    "Marca": "SENIOR",
+    "Descripcion": "Café soluble SENIOR 100 g",
+    "NormalPrice": "$193"
   },
   {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$295",
-    "SantanderPrice": "$251"
+    "Marca": "CABRALES",
+    "Descripcion": "Café molido CABRALES La Planta Del Café 500 g",
+    "NormalPrice": "$369"
   },
   {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$371",
-    "SantanderPrice": "$315"
+    "Marca": "AGUILA",
+    "Descripcion": "Café ÁGUILA 1 kg",
+    "NormalPrice": "$763"
   },
   {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$443",
-    "SantanderPrice": "$377"
+    "Marca": "EL CHANA",
+    "Descripcion": "Café molido EL CHANÁ glaseado 1 kg",
+    "NormalPrice": "$917"
   },
   {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$307",
-    "SantanderPrice": "$251"
+    "Marca": "NESTLÉ",
+    "Descripcion": "Cebada Nestlé ECCO 170 g",
+    "NormalPrice": "$258"
   },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$490",
-    "SantanderPrice": "$417"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$69",
-    "SantanderPrice": "$59"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$30",
-    "SantanderPrice": "$25"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$129",
-    "SantanderPrice": "$109"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$575",
-    "SantanderPrice": "$489"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$50",
-    "SantanderPrice": "$40"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$519",
-    "SantanderPrice": "$425"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$139",
-    "SantanderPrice": "$118"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$129",
-    "SantanderPrice": "$110"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$363",
-    "SantanderPrice": "$309"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$485",
-    "SantanderPrice": "$412"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$443",
-    "SantanderPrice": "$377"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$446",
-    "SantanderPrice": "$379"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$198",
-    "SantanderPrice": "$168"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$193",
-    "SantanderPrice": "$164"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$369",
-    "SantanderPrice": "$314"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$763",
-    "SantanderPrice": "$649"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$917",
-    "SantanderPrice": "$779"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$445",
-    "SantanderPrice": "$364"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$258",
-    "SantanderPrice": "$219"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$85",
-    "SantanderPrice": "$75"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$209",
-    "SantanderPrice": "$195"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "$129",
-    "SantanderPrice": "$109"
-  },
-  {
-    "Marca": "PRECIO LÍDER",
-    "Descripcion": "Cappuccino chocolate PRECIO LÍDER 6 un",
-    "NormalPrice": "U$S 199",
-    "SantanderPrice": "U$S 169"
-  }
+  "[[{\"Marca\":\"PRECIO LÍDER\",\"Descripcion\":\"Café molido glaseado PRECIO LIDER 500 g\",\"NormalPrice\":\"$295\",\"SantanderPrice\":\"$251\"}],[{\"Marca\":\"NESCAFÉ\",\"Descripcion\":\"Café BRACAFÉ 170 g pack ahorro\",\"NormalPrice\":\"$307\",\"SantanderPrice\":\"$251\"}],[{\"Marca\":\"NESCAFÉ\",\"Descripcion\":\"Café BRACAFÉ 14 sticks\",\"NormalPrice\":\"$69\",\"SantanderPrice\":\"$59\"}],[{\"Marca\":\"AGUILA\",\"Descripcion\":\"Café molido ÁGUILA extra azul 500 g\",\"NormalPrice\":\"$445\",\"SantanderPrice\":\"$364\"}],[{\"Marca\":\"PRECIO LÍDER\",\"Descripcion\":\"Café soluble PRECIO LÍDER clásico 170 g\",\"NormalPrice\":\"$209\",\"SantanderPrice\":\"$195\"}],[{\"Marca\":\"PRECIO LÍDER\",\"Descripcion\":\"Café soluble PRECIO LÍDER clásico 10 sticks\",\"NormalPrice\":\"$30\",\"SantanderPrice\":\"$25\"}],[{\"Marca\":\"PRECIO LÍDER\",\"Descripcion\":\"Cappuccino vainilla PRECIO LÍDER 6 un\",\"NormalPrice\":\"$129\",\"SantanderPrice\":\"$109\"}],[{\"Marca\":\"FLORESTAL\",\"Descripcion\":\"Caramelos de café FLORESTAL 108 g\",\"NormalPrice\":\"$50\",\"SantanderPrice\":\"$40\"}],[{\"Marca\":\"STARBUCKS\",\"Descripcion\":\"Café molido STARBUCKS medium house blend 250g\",\"NormalPrice\":\"$519\",\"SantanderPrice\":\"$425\"}],[{\"Marca\":\"NESCAFÉ\",\"Descripcion\":\"Cápsula NESCAFÉ Dolce Gusto au lait 160 g\",\"NormalPrice\":\"$575\",\"SantanderPrice\":\"$471\"}]]"
 ]
