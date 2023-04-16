@@ -1,16 +1,19 @@
 {
   "compilerOptions": {
+    
       "target": "es5",
       "lib": [
           "es5",
           "dom",
-          "es2015"
+          "ES2017"
       ],
       "baseUrl": "node_modules",
       "types": [
+        "cypress-wait-until",
           "cypress",
           "node"
-      ]
+      ],
+      "strict": true
   },
-  "include": ["**/*.ts", "support/e2e.js"]
+  "include": ["**/*.ts", "support/e2e.ts"]
 }

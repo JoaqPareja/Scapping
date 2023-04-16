@@ -2,7 +2,7 @@
 import {homePageGeant, deConstructCoffePage} from '../../../support/Pages/SuperMarkets'
 
 describe('Get the page information',()=>{
-    it('Store the page boxes information', ()=>{
+    it('Get to the coffe page', ()=>{
         homePageGeant.visitHomepage();
         cy.url().should('eq', 'https://www.geant.com.uy/')
         homePageGeant.typeSearchInput('Cafe');  

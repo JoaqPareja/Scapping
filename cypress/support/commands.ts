@@ -61,8 +61,13 @@ Cypress.Commands.add('reCreateProduct', reCreateProduct)
 Cypress.on('uncaught:exception', (err, runnable) => {
   // returning false here prevents Cypress from
   // failing the test
-  return false
+        return false
 })
+
+cy.on("fail", (err, runnable) => {
+  console.log(err.message);
+  return false;
+});
 
 // Cypress.Commands.add('checkWord', (arrayOfProductList,productRequested, wordFound)=>{
 //     return cy.wrap(arrayOfProductList).then(()=>{

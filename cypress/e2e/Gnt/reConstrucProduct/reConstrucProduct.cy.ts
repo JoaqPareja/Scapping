@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
 import {reConstructCoffePage} from '../../../support/Pages/SuperMarkets'
+import 'cypress-wait-until';
 
 describe('Re convert products',()=>{
     beforeEach('Bring products',()=>{
@@ -14,21 +15,26 @@ describe('Re convert products',()=>{
             reConstructCoffePage.createArrNormalAndSantanderPrices();
         })
         it('Check normal and santander prices',()=>{
-            cy.wrap(reConstructCoffePage.arrayOfPrecios).each((txt:any)=>{
-                try {
-                    cy.wrap(txt).should('not.be.empty');
-                    cy.wrap(txt.Marca).should('not.be.empty');
-                    cy.wrap(txt.Marca).should('not.contain', '1234567890!@#$%^&*()_+=')
-                    cy.wrap(txt.Descripcion).should('not.be.empty');
-                    cy.wrap(txt.NormalPrice).should('not.be.empty');
-                    cy.wrap(txt.NormalPrice).should('not.contain', 'abcdefghijklmnñopqrstuvwxyz')
-                    cy.wrap(txt.SantanderPrice).should('not.be.empty');
-                    cy.wrap(txt.SantanderPrice).should('not.contain', 'abcdefghijklmnñopqrstuvwxyz')
-                } catch (error) {
-                    cy.log(error)
-                }
-            })
+            cy.wrap(reConstructCoffePage.arrayOfPrecios).each((txt:any)=>{      
+                  
+                        txt&&txt.Marca && txt.Descripcion && txt.NormalPrice && txt.SantanderPrice?(
+                                cy.wrap(txt).should('not.be.empty'),
+                                cy.wrap(txt.Marca).should('not.be.empty'),
+                                cy.wrap(txt.Marca).should('not.contain', '1234567890!@#$%^&*()_+='),
+                                cy.wrap(txt.Descripcion).should('not.be.empty'),
+                                expect(txt.home).to.be.undefined,
+                                // cy.wrap(txt.home).should('not.be.empty');
+                                cy.wrap(txt.NormalPrice).should('not.contain', 'abcdefghijklmnñopqrstuvwxyz'),
+                                cy.wrap(txt.SantanderPrice).should('not.be.empty'),
+                                cy.wrap(txt.SantanderPrice).should('not.contain', 'abcdefghijklmnñopqrstuvwxyz') 
+                            // )
+                        ):(
+                            
+                            cy.log('properties do not exist')
+                        );
+                        
         })
+    })
         it('Get the USD prices', ()=>{
             reConstructCoffePage.createUSDPrices();
         })
@@ -43,7 +49,7 @@ describe('Re convert products',()=>{
                     cy.wrap(txt.NormalPrice).should('not.contain', 'abcdefghijklmnñopqrstuvwxyz')
                     cy.wrap(txt.SantanderPrice).should('not.be.empty');
                     cy.wrap(txt.SantanderPrice).should('not.contain', 'abcdefghijklmnñopqrstuvwxyz')
-                } catch (error) {
+                } catch (error:any) {
                     cy.log(error)
                 }
             })
@@ -59,7 +65,7 @@ describe('Re convert products',()=>{
                     cy.wrap(txt.Descripcion).should('not.be.empty');
                     cy.wrap(txt.NormalPrice).should('not.be.empty');
                     cy.wrap(txt.NormalPrice).should('not.contain', 'abcdefghijklmnñopqrstuvwxyz')
-                } catch (error) {
+                } catch (error:any) {
                     cy.log(error)
                 }
             })

@@ -1,5 +1,7 @@
 
 export default class ReConstructCoffePage {
+    //Declaring private variables
+    //Atributos de la clase
     datatestRaw:string = "cypress/fixtures/datatestRaw.json" 
     datatestGeant:string = "cypress/fixtures/datatestGeant.json" 
     productBrand:Array<string> =[];
@@ -12,7 +14,7 @@ export default class ReConstructCoffePage {
     elements:any; 
     newArrayCoffeeListArray:Array<any> =[];
     str:any;
-    element:any
+    element:any; 
     readfile(Assertion1:string, Assertion2:string, Assertion3:string, Assertion4:string){
         cy.readFile(this.datatestRaw).then((str)=>{
             cy.wrap(str).should(Assertion1)
@@ -27,29 +29,25 @@ export default class ReConstructCoffePage {
     createArrNormalAndSantanderPrices(){
         for (let index = 0; index < this.arrayCoffeeListArray.length; index++) {
             this.element = this.arrayCoffeeListArray[index];
+            //Aca le voy a pedir que si el caracter 4 existe y si ademas que existe es un signo de $ 
             if(this.element[0].Precio.charAt(3) && this.element[0].Precio.charAt(3) === '$'  ||  this.element[0].Precio.charAt(4) === '$'||  this.element[0].Precio.charAt(6) === '$'){
                 this.elements =  this.element[0].Precio.split('$')
                 let marca:Array<any> = [this.element[0].Marca]
                 let descripcion:Array<string> = [this.element[0].Descripcion]
-                cy.wrap( this.elements).then((txt:unknown)=>{
+                cy.wrap( this.elements).then((txt:any)=>{
                     let tempElement:any = marca.map(marca => new Array({ Marca: marca, Descripcion: descripcion[0], NormalPrice:'$'+txt[1], SantanderPrice: '$'+txt[2]}))
-                    // let str  = tempElement[0].toString();
-                    // cy.wrap(str).pause()
-                    // console.log(str)
-                   
                     this.arrayOfPrecios.push(tempElement[0][0]); 
                     // Le digo que empuje la posicionion [0][0] ya que en esta estoy accediendo dentro de ambos corchetes creados asi solo empujo el corchete '{}'
                 })              
             }     
         }
-
     }
     createUSDPrices(){
         for (let index = 0; index < this.arrayCoffeeListArray.length; index++) {
             this.element = this.arrayCoffeeListArray[index];
             if(this.element[0].Precio.charAt(7) == 'U'){
                 this.elements = this.element[0].Precio.split('U');
-                cy.wrap(this.elements).then((txt:unknown)=>{
+                cy.wrap(this.elements).then((txt:any)=>{
                     this.arrayOfUSDPrecios.push({Marca:this.element[0].Marca, Descripcion: this.element[0].Descripcion, NormalPrice:'U'+txt[1], SantanderPrice:'U'+txt[2]})
             })
         }

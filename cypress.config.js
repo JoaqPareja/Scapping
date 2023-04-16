@@ -3,6 +3,7 @@
 module.exports = {
   
   e2e: {
+    supportFile: 'cypress/support/e2e.ts',
     // experimentalMemoryManagement: true,
     viewportWidth: 1980,
     viewportHeight: 1050,
@@ -10,9 +11,6 @@ module.exports = {
       
       // implement node event listeners here
     },
-    env:{
-      "jsonfile": "../fixtures/datatest.json" 
-    }
-    
+   
   },
 };
