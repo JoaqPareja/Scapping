@@ -2,14 +2,25 @@
 import {reConstructCoffePage} from '../../../../support/Pages/SuperMarkets'
 
 describe('Construct USD Prices',()=>{
-    let arrayTepm:Array<string>=[];
+    let arrayTepm:any;
+   
     beforeEach('Get products',()=>{
+        
         reConstructCoffePage.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
-        cy.readFile(reConstructCoffePage.datatestGeant).then((data)=>{
-            arrayTepm = data;
+        cy.readFile(reConstructCoffePage.datatestGeant).then((data:any)=>{
+            arrayTepm= data
+            // arrayTepm = data;
+            // cy.wrap(arrayTepm).each((txt)=>{
+            //     cy.wrap(txt).pause()
+            //     // cy.wrap(txt[3]).pause()
+            //     // cy.wrap(txt[4]).pause()
+            // })
         })
+       
     })
     it('reCreateProduct',()=>{ 
+        
+        // JSON.parse(arrayTepm);
         cy.reCreateProduct(reConstructCoffePage.productBrand, reConstructCoffePage.elements, reConstructCoffePage.titleProduct, 
                             reConstructCoffePage.priceProduct, reConstructCoffePage.arrayCoffeeListArray)
                             cy.wrap(reConstructCoffePage.arrayCoffeeListArray).should('not.be.empty')
@@ -51,12 +62,12 @@ describe('Construct USD Prices',()=>{
     })
     })
     it('Unify arrays',()=>{
-        reConstructCoffePage.unifyArrays(reConstructCoffePage.arrayOfUSDPrecios, arrayTepm)
+        reConstructCoffePage.unifyArrays(arrayTepm, reConstructCoffePage.arrayOfUSDPrecios, )
     })
   
     it('Push Arrs',()=>{
-
-        reConstructCoffePage.pushJson(reConstructCoffePage.datatestGeant, reConstructCoffePage.arrayOfUSDPrecios);
+       
+        reConstructCoffePage.pushJson(reConstructCoffePage.datatestGeant, reConstructCoffePage.newArrayCoffeeListArray);
         reConstructCoffePage.readJson(reConstructCoffePage.datatestGeant, 'not.be.empty')
     })
 })

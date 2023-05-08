@@ -7,6 +7,7 @@ describe('Construct normal',()=>{
     reConstructCoffePage.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
     cy.readFile(reConstructCoffePage.datatestGeant).then((data)=>{
         arrayTepm =data;
+        
     })
 })
 it('reCreateProduct',()=>{ 
@@ -39,7 +40,7 @@ it('Unify arrays',()=>{
 })
 
 it('push into new Json',()=>{
-    reConstructCoffePage.pushJson(reConstructCoffePage.datatestGeant, reConstructCoffePage.normalArr);
+    reConstructCoffePage.pushJson(reConstructCoffePage.datatestGeant, reConstructCoffePage.newArrayCoffeeListArray);
     reConstructCoffePage.readJson(reConstructCoffePage.datatestGeant, 'not.be.empty')
 })
 })

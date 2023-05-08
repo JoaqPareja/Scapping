@@ -138,5 +138,157 @@
     "Marca": "NESTLÉ",
     "Descripcion": "Cebada Nestlé ECCO 170 g",
     "NormalPrice": "$258"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Café BRACAFÉ 170 g pack ahorro",
+    "NormalPrice": "$307"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Café BRACAFÉ 170 g + regalo",
+    "NormalPrice": "$371"
+  },
+  {
+    "Marca": "PRECIO LÍDER",
+    "Descripcion": "Café soluble PRECIO LÍDER clásico 10 sticks",
+    "NormalPrice": "$29"
+  },
+  {
+    "Marca": "PRECIO LÍDER",
+    "Descripcion": "Café molido glaseado PRECIO LIDER 500 g",
+    "NormalPrice": "$339"
+  },
+  {
+    "Marca": "FLORESTAL",
+    "Descripcion": "Caramelos de café FLORESTAL 108 g",
+    "NormalPrice": "$50",
+    "SantanderPrice": "$40"
+  },
+  {
+    "Marca": "STARBUCKS",
+    "Descripcion": "Café molido STARBUCKS medium house blend 250g",
+    "NormalPrice": "$519"
+  },
+  {
+    "Marca": "EL CHANA",
+    "Descripcion": "Café molido EL CHANÁ 500 g + 100 g gratis",
+    "NormalPrice": "$490"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Pack 3x2 cápsulas NESCAFÉ Dolce Gusto espresso",
+    "NormalPrice": "$1.150"
+  },
+  {
+    "Marca": "IGUAÇU",
+    "Descripcion": "Café IGUAÇU tradicional 200 g + sachet 50 g",
+    "NormalPrice": "$363"
+  },
+  {
+    "Marca": "NESTLÉ",
+    "Descripcion": "Café NESCAFÉ Gold 100 g",
+    "NormalPrice": "$485"
+  },
+  {
+    "Marca": "AGUILA",
+    "Descripcion": "Café instantáneo ÁGUILA 10 sticks",
+    "NormalPrice": "$50"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Café NESCAFÉ tradicao 200 g",
+    "NormalPrice": "$443"
+  },
+  {
+    "Marca": "STARBUCKS",
+    "Descripcion": "Café molido STARBUCKS dark verona 250g",
+    "NormalPrice": "$519"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Cápsula NESCAFÉ Dolce Gusto mochaccino canela 275 g",
+    "NormalPrice": "$575"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Pack 3 x 2 cappuccino NESCAFÉ moka 8 sobres",
+    "NormalPrice": "$684",
+    "SantanderPrice": "$599"
+  },
+  {
+    "Marca": "BRIGITTA",
+    "Descripcion": "Papel filtro Nº 4 BRIGITTA 30 un.",
+    "NormalPrice": "$129"
+  },
+  {
+    "Marca": "SENIOR",
+    "Descripcion": "Café SENIOR tradicional 500g",
+    "NormalPrice": "$446"
+  },
+  {
+    "Marca": "PELE",
+    "Descripcion": "Café instantáneo PELÉ 100 g",
+    "NormalPrice": "$125"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Cápsula NESCAFÉ Dolce Gusto au lait 160 g",
+    "NormalPrice": "$575"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Café instantáneo BRACAFÉ Nestlé recarga sachet 50 g",
+    "NormalPrice": "$139"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Café BRACAFÉ 14 sticks",
+    "NormalPrice": "$69"
+  },
+  {
+    "Marca": "SENIOR",
+    "Descripcion": "Café soluble instantáneo SENIOR 200 g",
+    "NormalPrice": "$361"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Café BRACAFÉ n°3 170 g",
+    "NormalPrice": "$371"
+  },
+  {
+    "Marca": "SENIOR",
+    "Descripcion": "Café epresso grano SENIOR 1 kg",
+    "NormalPrice": "$1.373"
+  },
+  {
+    "Marca": "SENIOR",
+    "Descripcion": "Café SENIOR fuerte 500 g",
+    "NormalPrice": "$425"
+  },
+  {
+    "Marca": "AGUILA",
+    "Descripcion": "Café molido ÁGUILA extra azul 500 g",
+    "NormalPrice": "$445"
+  },
+  {
+    "Marca": "NESTLÉ",
+    "Descripcion": "Cebada Nestlé ECCO 170 g",
+    "NormalPrice": "$258"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Pack cafetera automática NESCAFÉ digital Genio s plus+café+tazas",
+    "NormalPrice": "U$S 199"
+  },
+  {
+    "Marca": "NESCAFÉ",
+    "Descripcion": "Pack cafetera NESCAFÉ automática Mini Me blanca + 3 cajas de café",
+    "NormalPrice": "U$S 179"
+  },
+  {
+    "Marca": "KASSEL",
+    "Descripcion": "Cafetera multicápsula KASSEL Mod. KS-CM15",
+    "NormalPrice": "U$S 99"
   }
 ]

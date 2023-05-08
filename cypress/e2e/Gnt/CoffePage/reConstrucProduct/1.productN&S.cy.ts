@@ -47,10 +47,13 @@ describe('Re convert products Check normal and santander prices',()=>{
         })
     })
     it('Check Santander Price',()=>{
-        cy.wrap(reConstructCoffePage.arrayOfPrecios).each((txt:any)=>{   
-            cy.log('Property of SantanderPrice')
-            cy.wrap(txt.SantanderPrice).should('not.be.empty'),
-            cy.wrap(txt.SantanderPrice).should('not.contain', 'abcdefghijklmnñopqrstuvwxyz') 
+        cy.wrap(reConstructCoffePage.arrayOfPrecios).each((txt:any)=>{
+            if(txt.SantanderPrice){
+                cy.log('Property of SantanderPrice')
+                cy.wrap(txt.SantanderPrice).should('not.be.empty'),
+                cy.wrap(txt.SantanderPrice).should('not.contain', 'abcdefghijklmnñopqrstuvwxyz') 
+            }   
+          
         })
         
     })

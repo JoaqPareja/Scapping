@@ -40,11 +40,20 @@ export default class ReConstructCoffePage {
                 this.elements =  this.element[0].Precio.split('$')
                 let marca:Array<any>= [this.element[0].Marca]
                 let descripcion:Array<string> = [this.element[0].Descripcion]
-                cy.wrap( this.elements).then((txt:any)=>{
-                    this.tempElement = marca.map(marca => new Array({ Marca: marca, Descripcion: descripcion[0], NormalPrice:'$'+txt[1], SantanderPrice: '$'+txt[2]}))
-                    this.arrayOfPrecios.push(this.tempElement[0][0]); 
-                    // Le digo que empuje la posicionion [0][0] ya que en esta estoy accediendo dentro de ambos corchetes creados asi solo empujo el corchete '{}'
-                })              
+                if(this.element[0].Precio.charAt(3) === '$'||this.element[0].Precio.charAt(4) === '$'||this.element[0].Precio.charAt(5) === '$'||this.element[0].Precio.charAt(6) === '$' || this.element[0].Precio.charAt(7) === '$'){
+                    cy.wrap( this.elements).then((txt:any)=>{
+                        this.tempElement = marca.map(marca => new Array({ Marca: marca, Descripcion: descripcion[0], NormalPrice:'$'+txt[1], SantanderPrice: '$'+txt[2]}))
+                        this.arrayOfPrecios.push(this.tempElement[0][0]); 
+                    })
+                }
+                else if(this.element[0].Precio.charAt(3) != '$'||this.element[0].Precio.charAt(4) != '$'||this.element[0].Precio.charAt(5) != '$'||this.element[0].Precio.charAt(6) != '$' || this.element[0].Precio.charAt(7) != '$'){
+                    cy.wrap( this.elements).then((txt:any)=>{
+                        this.tempElement = marca.map(marca => new Array({ Marca: marca, Descripcion: descripcion[0], NormalPrice:'$'+txt[1]}))
+                        this.arrayOfPrecios.push(this.tempElement[0][0]); 
+                        // Le digo que empuje la posicionion [0][0] ya que en esta estoy accediendo dentro de ambos corchetes creados asi solo empujo el corchete '{}'
+                    })  
+                }
+                             
             }     
         }
     }
@@ -83,7 +92,7 @@ export default class ReConstructCoffePage {
         }
     }
     unifyArrays(arr1:Array<unknown>, arr2:Array<unknown>){
-        this.newArrayCoffeeListArray =  this.newArrayCoffeeListArray.concat(arr1, arr2)
+        this.newArrayCoffeeListArray = arr1.concat(arr2)
     }
     pushJson(JsonCallBack:string, currentArr:Array<any>){
         cy.writeFile(JsonCallBack, currentArr)
