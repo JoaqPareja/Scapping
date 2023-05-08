@@ -29,18 +29,18 @@ cy.wrap(productBrand).pause();
 }
 
 
-export function checkWord(arrayOfProductList: Array<string>, productRequested:string, wordFound:string){
-  return cy.wrap(arrayOfProductList).then(()=>{
-     return cy.contains(productRequested).each((response: { text: () => Array<string>; })=>{
-      wordFound += response.text()
-      wordFound = JSON.stringify(wordFound)
-      cy.writeFile('../fixtures/datatest', wordFound)
-        // Cypress.env(wordFound, 'wordFound');
-      }) 
-    })
-  }
+// export function checkWord(arrayOfProductList: Array<string>, productRequested:string, wordFound:string){
+//   return cy.wrap(arrayOfProductList).then(()=>{
+//      return cy.contains(productRequested).each((response: { text: () => Array<string>; })=>{
+//       wordFound += response.text()
+//       wordFound = JSON.stringify(wordFound)
+//       cy.writeFile('../fixtures/datatest', wordFound)
+//         // Cypress.env(wordFound, 'wordFound');
+//       }) 
+//     })
+//   }
 
-  export function reCreateProduct(productBrand:Array<string>,elements:unknown, titleProduct:Array<string>, 
+  export function reCreateProduct(productBrand:Array<string>,elements:any, titleProduct:Array<string>, 
         priceProduct:Array<string>, arrayCoffeeListArray:Array<unknown>){
           for (let i = 0; i < productBrand.length; i++) {
 
@@ -53,7 +53,7 @@ export function checkWord(arrayOfProductList: Array<string>, productRequested:st
   // cy.wrap(arrayCoffeeListArray[2]).pause();
   }
 
-Cypress.Commands.add('checkWord', checkWord)
+// Cypress.Commands.add('checkWord', checkWord)
 Cypress.Commands.add('readJsonProduct', readJsonProduct)
 Cypress.Commands.add('reCreateProduct', reCreateProduct)
 
@@ -64,10 +64,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
         return false
 })
 
-cy.on("fail", (err, runnable) => {
-  console.log(err.message);
-  return false;
-});
+
 
 // Cypress.Commands.add('checkWord', (arrayOfProductList,productRequested, wordFound)=>{
 //     return cy.wrap(arrayOfProductList).then(()=>{

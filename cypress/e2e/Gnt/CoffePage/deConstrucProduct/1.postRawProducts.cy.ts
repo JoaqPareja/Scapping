@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import {homePageGeant, deConstructCoffePage} from '../../../support/Pages/SuperMarkets'
+import {homePageGeant, deConstructCoffePage} from '../../../../support/Pages/SuperMarkets'
 
 describe('Get the page information',()=>{
     it('Get to the coffe page', ()=>{
