@@ -1,4 +1,4 @@
-export default class Urls{
+export default class GntUrls{
     urlsGeant={
       urlHomepage: () =>  cy.visit('https://www.geant.com.uy/'),
       coffepage:()=>cy.visit('https://www.geant.com.uy/busca?ft=cafe'),
@@ -6,7 +6,7 @@ export default class Urls{
     visitHomepage(){
       this.urlsGeant.urlHomepage();
     }
-    coffePage(){
+    coffeePage(){
       this.urlsGeant.coffepage();
     }
 }

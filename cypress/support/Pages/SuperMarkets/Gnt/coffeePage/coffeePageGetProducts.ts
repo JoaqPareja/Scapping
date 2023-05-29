@@ -1,10 +1,10 @@
 import  Urls  from '../urls';
-export default class DeConstructCoffePage extends Urls{
+export default class GntDeConstructCoffeePage extends Urls{
     productBrand:Array<unknown> =[];
     titleProduct:Array<unknown> =[]; 
     priceProduct:Array<unknown> =[]; 
     arrayCoffeeListArray:Array<unknown> =[];
-    datatestRawGeant:string = 'cypress/fixtures/datatestRaw.json'
+    datatestRawGeant:string = 'cypress/fixtures/gntRawCoffeeProds.json'
     tryElement:unknown; 
     santanderImg:Array<boolean> = [];
     constructor(){
@@ -30,8 +30,7 @@ export default class DeConstructCoffePage extends Urls{
                 this.titleProduct.push( response.text())
             })
             cy.wrap($element).find('div > p').then((response: { text: () => string;})=>{
-                this.priceProduct.push(response.text());
-                
+                this.priceProduct.push(response.text());     
             })
             
         })

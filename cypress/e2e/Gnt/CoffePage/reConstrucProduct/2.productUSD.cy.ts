@@ -1,13 +1,13 @@
 /// <reference types="cypress" />
-import {reConstructCoffePage} from '../../../../support/Pages/SuperMarkets'
+import {gntReConstructCoffePage} from '../../../../support/Pages/SuperMarkets'
 
 describe('Construct USD Prices',()=>{
     let arrayTepm:any;
    
     beforeEach('Get products',()=>{
         
-        reConstructCoffePage.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
-        cy.readFile(reConstructCoffePage.datatestGeant).then((data:any)=>{
+        gntReConstructCoffePage.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
+        cy.readFile(gntReConstructCoffePage.datatestGeant).then((data:any)=>{
             arrayTepm= data
             // arrayTepm = data;
             // cy.wrap(arrayTepm).each((txt)=>{
@@ -21,15 +21,15 @@ describe('Construct USD Prices',()=>{
     it('reCreateProduct',()=>{ 
         
         // JSON.parse(arrayTepm);
-        cy.reCreateProduct(reConstructCoffePage.productBrand, reConstructCoffePage.elements, reConstructCoffePage.titleProduct, 
-                            reConstructCoffePage.priceProduct, reConstructCoffePage.arrayCoffeeListArray)
-                            cy.wrap(reConstructCoffePage.arrayCoffeeListArray).should('not.be.empty')
+        cy.reCreateProduct(gntReConstructCoffePage.productBrand, gntReConstructCoffePage.elements, gntReConstructCoffePage.titleProduct, 
+            gntReConstructCoffePage.priceProduct, gntReConstructCoffePage.arrayCoffeeListArray)
+                            cy.wrap(gntReConstructCoffePage.arrayCoffeeListArray).should('not.be.empty')
                         })
     it('Get the USD prices', ()=>{
-        reConstructCoffePage.createUSDPrices();
+        gntReConstructCoffePage.createUSDPrices();
     })
     it('Check Marca',()=>{   
-            cy.wrap(reConstructCoffePage.arrayOfUSDPrecios).each((txt:any)=>{   
+            cy.wrap(gntReConstructCoffePage.arrayOfUSDPrecios).each((txt:any)=>{   
                 //This is purely to check if property exist using a conditional (ternary) operator
                 txt&&txt.Marca?(
                         cy.log('Marca property'),
@@ -41,19 +41,19 @@ describe('Construct USD Prices',()=>{
             })
     })
     it('Check Description',()=>{
-        cy.wrap(reConstructCoffePage.arrayOfUSDPrecios).each((txt:any)=>{  
+        cy.wrap(gntReConstructCoffePage.arrayOfUSDPrecios).each((txt:any)=>{  
             cy.log('Desription property')
             cy.wrap(txt.Descripcion).should('not.be.empty')                   
         })
     })
     it('Check  Normal Price', ()=>{
-        cy.wrap(reConstructCoffePage.arrayOfUSDPrecios).each((txt:any)=>{   
+        cy.wrap(gntReConstructCoffePage.arrayOfUSDPrecios).each((txt:any)=>{   
             cy.log('Property of NormalPrice')
             cy.wrap(txt.NormalPrice).should('not.contain', 'abcdefghijklmnñopqrstuvwxyz')
         })
     })
     it('Check SantanderPrice', ()=>{
-        cy.wrap(reConstructCoffePage.arrayOfUSDPrecios).each((txt:any)=>{   
+        cy.wrap(gntReConstructCoffePage.arrayOfUSDPrecios).each((txt:any)=>{   
         if(txt.SantanderPrice){
             cy.log('Property of SantanderPrice')
             cy.wrap(txt.SantanderPrice).should('not.be.empty'),
@@ -62,13 +62,13 @@ describe('Construct USD Prices',()=>{
     })
     })
     it('Unify arrays',()=>{
-        reConstructCoffePage.unifyArrays(arrayTepm, reConstructCoffePage.arrayOfUSDPrecios, )
+        gntReConstructCoffePage.unifyArrays(arrayTepm, gntReConstructCoffePage.arrayOfUSDPrecios, )
     })
   
     it('Push Arrs',()=>{
        
-        reConstructCoffePage.pushJson(reConstructCoffePage.datatestGeant, reConstructCoffePage.newArrayCoffeeListArray);
-        reConstructCoffePage.readJson(reConstructCoffePage.datatestGeant, 'not.be.empty')
+        gntReConstructCoffePage.pushJson(gntReConstructCoffePage.datatestGeant, gntReConstructCoffePage.newArrayCoffeeListArray);
+        gntReConstructCoffePage.readJson(gntReConstructCoffePage.datatestGeant, 'not.be.empty')
     })
 })
 

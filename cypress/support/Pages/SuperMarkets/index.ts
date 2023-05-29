@@ -1,13 +1,15 @@
 
-import HomePageDevoto from "./Dvto/homepage"
-export const homePageDevoto = new HomePageDevoto();
+import DvtHomePage from "./Dvt/homepage"
+export const dvtHomePage = new DvtHomePage();
 
-import HomePageGeant from "./Gnt/homepage";
-export const homePageGeant = new HomePageGeant();
+import GntHomePage from "./Gnt/homepage";
+export const gntHomePage = new GntHomePage();
 
-import DeConstructCoffePage from "./Gnt/coffePage/coffePageGetProducts"
-export const deConstructCoffePage = new DeConstructCoffePage();
+import GntDeConstructCoffeePage from "./Gnt/coffeePage/coffeePageGetProducts"
+export const gntDeConstructCoffePage = new GntDeConstructCoffeePage();
 
+import GntReConstructCoffeePage from "./Gnt/coffeePage/coffeepPageReCreateProducts"
+export const gntReConstructCoffePage = new GntReConstructCoffeePage(); 
 
-import ReConstructCoffePage from "./Gnt/coffePage/coffepPagePostProducts"
-export const reConstructCoffePage = new ReConstructCoffePage();
+import DvtDeConstructCoffeePage from "./Dvt/coffePage/coffeeGetProducts"
+export const dvtDeConstructCoffePage = new DvtDeConstructCoffeePage();

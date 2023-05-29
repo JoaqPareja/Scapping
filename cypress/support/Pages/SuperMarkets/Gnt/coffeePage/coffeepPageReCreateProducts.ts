@@ -1,9 +1,9 @@
 
-export default class ReConstructCoffePage {
+export default class GntReConstructCoffeePage{
     //Declaring private variables
     //Atributos de la clase
-    datatestRaw:string = "cypress/fixtures/datatestRaw.json" 
-    datatestGeant:string ="cypress/fixtures/datatestGeant.json"
+    datatestRaw:string = "cypress/fixtures/gntRawCoffeeProds.json" 
+    datatestGeant:string ="cypress/fixtures/gntReConCoffeeProduct.json"
     productBrand:Array<string> =[];
     titleProduct:Array<string> =[]; 
     priceProduct:Array<any> =[]; 

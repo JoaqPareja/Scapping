@@ -1,11 +1,10 @@
 /// <reference types="cypress" />
-import {reConstructCoffePage} from '../../../../support/Pages/SuperMarkets'
+import {gntReConstructCoffePage} from '../../../../support/Pages/SuperMarkets'
 
 describe('Concat both arrays and check them',{defaultCommandTimeout:10000}, ()=>{
     let arrayTepm:Array<string>=[];
     beforeEach('Get products',()=>{
-        // reConstructCoffePage.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
-        cy.readFile(reConstructCoffePage.datatestGeant).then((data)=>{
+        cy.readFile(gntReConstructCoffePage.datatestGeant).then((data)=>{
             arrayTepm = data;
         })
     })
@@ -24,12 +23,7 @@ describe('Concat both arrays and check them',{defaultCommandTimeout:10000}, ()=>
                 cy.wrap(txt.NormalPrice).should('not.be.null')
                 cy.wrap(txt.NormalPrice).should('contain','$')
                 cy.wrap(txt.NormalPrice).should('not.include','abcdefghijklmnñopqrstuvwxyz')
-                // expect(txt.NormalPrice).to.not.be.null;
-                // expect(txt.NormalPrice).to.include('$')
-                // expect(txt.NormalPrice).to.not.contain.value('abcdefghijklmnñopqrstuvwxyz')
-                // cy.wrap(txt.NormalPrice).should('include.any.keys','$0123456789' );
-               
-                // .should('not.be.null')    
+      
             })
         })
         it('Check SantanderPrice', ()=>{
@@ -44,7 +38,7 @@ describe('Concat both arrays and check them',{defaultCommandTimeout:10000}, ()=>
                 // expect(txt.SantanderPrice).to.not.contain.value('abcdefghijklmnñopqrstuvwxyz')
             }
             else{
-                cy.log('santander price does Not exist')
+                cy.log('The property Santander price does Not exist')
             }
        
         })
