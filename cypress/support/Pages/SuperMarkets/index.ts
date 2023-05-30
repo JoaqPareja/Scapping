@@ -15,3 +15,6 @@ export const gntReConstructCoffeProducts= new GntReConstructProducts(gntDeConstr
 
 import DvtDeConstructCoffeePage from "./Dvt/coffePage/1.getPostProducts"
 export const dvtDeConstructCoffePage = new DvtDeConstructCoffeePage();
+
+import GntStoreProducts from "./Gnt/GntStoreProducts/GntStoreProducts";
+export const gntStoreProducts = new GntStoreProducts()

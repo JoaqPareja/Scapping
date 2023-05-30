@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    
+    "noImplicitAny": false,
       "target": "es5",
       "lib": [
           "es5",
@@ -13,7 +13,8 @@
           "cypress",
           "node"
       ],
-      "strict": true
+      "strict": true,
+      // "noImplicitAny": false
   },
   "include": ["**/*.ts", "support/e2e.ts"]
 }
