@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import {dvtHomePage, dvtDeConstructCoffePage} from '../../../support/Pages/SuperMarkets'
+import {dvtHomePage, dvtDeConstructCoffePage} from '../../../../support/Pages/SuperMarkets'
 
 describe('Starting Web scrapping', () => {
  beforeEach(()=>{
