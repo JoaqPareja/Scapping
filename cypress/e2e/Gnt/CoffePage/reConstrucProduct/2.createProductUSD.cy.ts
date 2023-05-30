@@ -1,13 +1,14 @@
 /// <reference types="cypress" />
-import {gntReConstructCoffePage} from '../../../../support/Pages/SuperMarkets'
+import {gntReConstructCoffeProducts} from '../../../../support/Pages/SuperMarkets'
 
 describe('Construct USD Prices',()=>{
     let arrayTepm:any;
-   
+    let gntNewJsonCoffee:string ="cypress/fixtures/gntReConCoffeeProduct.json"
+
     beforeEach('Get products',()=>{
         
-        gntReConstructCoffePage.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
-        cy.readFile(gntReConstructCoffePage.datatestGeant).then((data:any)=>{
+        gntReConstructCoffeProducts.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
+        cy.readFile(gntNewJsonCoffee).then((data:any)=>{
             arrayTepm= data
             // arrayTepm = data;
             // cy.wrap(arrayTepm).each((txt)=>{
@@ -21,15 +22,15 @@ describe('Construct USD Prices',()=>{
     it('reCreateProduct',()=>{ 
         
         // JSON.parse(arrayTepm);
-        cy.reCreateProduct(gntReConstructCoffePage.productBrand, gntReConstructCoffePage.elements, gntReConstructCoffePage.titleProduct, 
-            gntReConstructCoffePage.priceProduct, gntReConstructCoffePage.arrayCoffeeListArray)
-                            cy.wrap(gntReConstructCoffePage.arrayCoffeeListArray).should('not.be.empty')
+        cy.reCreateProduct(gntReConstructCoffeProducts.productBrand, gntReConstructCoffeProducts.elements, gntReConstructCoffeProducts.titleProduct, 
+            gntReConstructCoffeProducts.priceProduct, gntReConstructCoffeProducts.arrayCoffeeListArray)
+                            cy.wrap(gntReConstructCoffeProducts.arrayCoffeeListArray).should('not.be.empty')
                         })
     it('Get the USD prices', ()=>{
-        gntReConstructCoffePage.createUSDPrices();
+        gntReConstructCoffeProducts.createUSDPrices();
     })
     it('Check Marca',()=>{   
-            cy.wrap(gntReConstructCoffePage.arrayOfUSDPrecios).each((txt:any)=>{   
+            cy.wrap(gntReConstructCoffeProducts.arrayOfUSDPrecios).each((txt:any)=>{   
                 //This is purely to check if property exist using a conditional (ternary) operator
                 txt&&txt.Marca?(
                         cy.log('Marca property'),
@@ -41,19 +42,19 @@ describe('Construct USD Prices',()=>{
             })
     })
     it('Check Description',()=>{
-        cy.wrap(gntReConstructCoffePage.arrayOfUSDPrecios).each((txt:any)=>{  
+        cy.wrap(gntReConstructCoffeProducts.arrayOfUSDPrecios).each((txt:any)=>{  
             cy.log('Desription property')
             cy.wrap(txt.Descripcion).should('not.be.empty')                   
         })
     })
     it('Check  Normal Price', ()=>{
-        cy.wrap(gntReConstructCoffePage.arrayOfUSDPrecios).each((txt:any)=>{   
+        cy.wrap(gntReConstructCoffeProducts.arrayOfUSDPrecios).each((txt:any)=>{   
             cy.log('Property of NormalPrice')
             cy.wrap(txt.NormalPrice).should('not.contain', 'abcdefghijklmnñopqrstuvwxyz')
         })
     })
     it('Check SantanderPrice', ()=>{
-        cy.wrap(gntReConstructCoffePage.arrayOfUSDPrecios).each((txt:any)=>{   
+        cy.wrap(gntReConstructCoffeProducts.arrayOfUSDPrecios).each((txt:any)=>{   
         if(txt.SantanderPrice){
             cy.log('Property of SantanderPrice')
             cy.wrap(txt.SantanderPrice).should('not.be.empty'),
@@ -62,13 +63,13 @@ describe('Construct USD Prices',()=>{
     })
     })
     it('Unify arrays',()=>{
-        gntReConstructCoffePage.unifyArrays(arrayTepm, gntReConstructCoffePage.arrayOfUSDPrecios, )
+        gntReConstructCoffeProducts.unifyArrays(arrayTepm, gntReConstructCoffeProducts.arrayOfUSDPrecios, )
     })
   
     it('Push Arrs',()=>{
        
-        gntReConstructCoffePage.pushJson(gntReConstructCoffePage.datatestGeant, gntReConstructCoffePage.newArrayCoffeeListArray);
-        gntReConstructCoffePage.readJson(gntReConstructCoffePage.datatestGeant, 'not.be.empty')
+        gntReConstructCoffeProducts.pushJson(gntNewJsonCoffee, gntReConstructCoffeProducts.newArrayCoffeeListArray);
+        gntReConstructCoffeProducts.readJson(gntNewJsonCoffee, 'not.be.empty')
     })
 })
 

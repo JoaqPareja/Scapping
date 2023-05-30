@@ -1,21 +1,23 @@
 /// <reference types="cypress" />
-import {gntReConstructCoffePage} from '../../../../support/Pages/SuperMarkets'
+import {gntReConstructCoffeProducts} from '../../../../support/Pages/SuperMarkets'
 
 describe('Re convert products Check normal and santander prices',()=>{
+    let gntNewJsonCoffee:string ="cypress/fixtures/gntReConCoffeeProduct.json"
+
     beforeEach('Get products',()=>{
-        gntReConstructCoffePage.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
+        gntReConstructCoffeProducts.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
     })
     it('reCreateProduct',()=>{ 
-            cy.reCreateProduct(gntReConstructCoffePage.productBrand, gntReConstructCoffePage.elements, gntReConstructCoffePage.titleProduct, 
-                gntReConstructCoffePage.priceProduct, gntReConstructCoffePage.arrayCoffeeListArray)
-            cy.wrap(gntReConstructCoffePage.arrayCoffeeListArray).should('not.be.empty')
+            cy.reCreateProduct(gntReConstructCoffeProducts.productBrand, gntReConstructCoffeProducts.elements, 
+                gntReConstructCoffeProducts.titleProduct, gntReConstructCoffeProducts.priceProduct, gntReConstructCoffeProducts.arrayCoffeeListArray)
+            cy.wrap(gntReConstructCoffeProducts.arrayCoffeeListArray).should('not.be.empty')
         })
         it('convert array of normal prices and santander prices',()=>{
-            gntReConstructCoffePage.createArrNormalAndSantanderPrices();
+            gntReConstructCoffeProducts.createArrNormalAndSantanderPrices();
            
         })
         it('Check Marca',()=>{
-                     cy.wrap(gntReConstructCoffePage.arrayOfPrecios).each((txt:any)=>{   
+                     cy.wrap(gntReConstructCoffeProducts.arrayOfPrecios).each((txt:any)=>{   
                     //This is purely to check if property exist using a conditional (ternary) operator
                     txt&&txt.Marca?(
                             cy.log('Marca property'),
@@ -27,25 +29,25 @@ describe('Re convert products Check normal and santander prices',()=>{
                 })
     })
     it('Desription',()=>{
-        cy.wrap(gntReConstructCoffePage.arrayOfPrecios).each((txt:any)=>{   
+        cy.wrap(gntReConstructCoffeProducts.arrayOfPrecios).each((txt:any)=>{   
             cy.log('Desription property')
             cy.wrap(txt.Descripcion).should('not.be.empty')                   
         })
     })
     it('Home property should not exist',()=>{
-        cy.wrap(gntReConstructCoffePage.arrayOfPrecios).each((txt:any)=>{   
+        cy.wrap(gntReConstructCoffeProducts.arrayOfPrecios).each((txt:any)=>{   
             cy.log('Property of home which should no longer exist')
             expect(txt.home).to.be.undefined
         })
     })
     it('Check normal Price',()=>{
-        cy.wrap(gntReConstructCoffePage.arrayOfPrecios).each((txt:any)=>{   
+        cy.wrap(gntReConstructCoffeProducts.arrayOfPrecios).each((txt:any)=>{   
             cy.log('Property of NormalPrice')
             cy.wrap(txt.NormalPrice).should('not.contain', 'abcdefghijklmnñopqrstuvwxyz')
         })
     })
     it('Check Santander Price',()=>{
-        cy.wrap(gntReConstructCoffePage.arrayOfPrecios).each((txt:any)=>{
+        cy.wrap(gntReConstructCoffeProducts.arrayOfPrecios).each((txt:any)=>{
             if(txt.SantanderPrice){
                 cy.log('Property of SantanderPrice')
                 cy.wrap(txt.SantanderPrice).should('not.be.empty'),
@@ -55,9 +57,8 @@ describe('Re convert products Check normal and santander prices',()=>{
     })
     it('push into new Json',()=>{
         // cy.wrap(reConstructCoffePage.productBrand).pause();
-    
-        gntReConstructCoffePage.pushJson(gntReConstructCoffePage.datatestGeant, gntReConstructCoffePage.arrayOfPrecios);
-        gntReConstructCoffePage.readJson(gntReConstructCoffePage.datatestGeant, 'not.be.empty')
+        gntReConstructCoffeProducts.pushJson(gntNewJsonCoffee, gntReConstructCoffeProducts.arrayOfPrecios);
+        gntReConstructCoffeProducts.readJson(gntNewJsonCoffee, 'not.be.empty')
     })
  
 })

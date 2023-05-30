@@ -1,12 +1,11 @@
 import  Urls  from '../urls';
 export default class GntDeConstructCoffeePage extends Urls{
-    productBrand:Array<unknown> =[];
-    titleProduct:Array<unknown> =[]; 
-    priceProduct:Array<unknown> =[]; 
-    arrayCoffeeListArray:Array<unknown> =[];
-    datatestRawGeant:string = 'cypress/fixtures/gntRawCoffeeProds.json'
-    tryElement:unknown; 
-    santanderImg:Array<boolean> = [];
+    private productBrand:Array<unknown> =[];
+    private titleProduct:Array<unknown> =[]; 
+    private priceProduct:Array<unknown> =[]; 
+    private arrayCoffeeListArray:Array<unknown> =[];
+    private gntRawJsonCoffee:string = 'cypress/fixtures/gntRawCoffeeProds.json'
+
     constructor(){
         super();
     }
@@ -38,7 +37,7 @@ export default class GntDeConstructCoffeePage extends Urls{
             return  this.arrayCoffeeListArray.push( this.productBrand, this.titleProduct, this.priceProduct)
 }
     writefile(){
-        cy.writeFile(this.datatestRawGeant, this.arrayCoffeeListArray)
+        cy.writeFile(this.gntRawJsonCoffee, this.arrayCoffeeListArray)
 
     }   
 }
