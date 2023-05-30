@@ -2,6 +2,7 @@
 
 module.exports = {
   defaultCommandTimeout: 30000,
+  videoUploadOnPasses: false,
   retries: {
     runMode: 1,
     openMode: 1,
