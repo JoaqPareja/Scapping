@@ -1,0 +1,201 @@
+[
+  {
+    "Marca": "OVINA",
+    "Descripcion": "Riñón ovino congelado LAS PIEDRAS al vacío x 1 kg",
+    "NormalPrice": "$279"
+  },
+  {
+    "Marca": "Bodega Catena Zapata",
+    "Descripcion": "Vino tinto Histórico D.V. CATENA 750 ml",
+    "NormalPrice": "$1.350$1.148"
+  },
+  {
+    "Marca": "LUIGI BOSCA",
+    "Descripcion": "Vino Tinto Malbec De Sangre LUIGI BOSCA 750 ml",
+    "NormalPrice": "$1.140$969"
+  },
+  {
+    "Marca": "CERRO DEL TORO",
+    "Descripcion": "Vino blanco Albariño CERRO DEL TORO 750 ml",
+    "NormalPrice": "$1.770$475$404"
+  },
+  {
+    "Marca": "OVINA",
+    "Descripcion": "Riñón ovino congelado LAS PIEDRAS al vacío x 1 kg",
+    "NormalPrice": "$279"
+  },
+  {
+    "Marca": "Bodega Catena Zapata",
+    "Descripcion": "Malbec Alamos Tinto",
+    "NormalPrice": "$499",
+    "SantanderPrice": "$424"
+  },
+  {
+    "Marca": "Bodega Catena Zapata",
+    "Descripcion": "Vino tinto Histórico D.V. CATENA 750 ml",
+    "NormalPrice": "$1.350",
+    "SantanderPrice": "$1.148"
+  },
+  {
+    "Marca": "Familia Deicas",
+    "Descripcion": "Vino Blanco Albariño Atlántico Sur 750 ml",
+    "NormalPrice": "$495",
+    "SantanderPrice": "$421"
+  },
+  {
+    "Marca": "CASA SILVA",
+    "Descripcion": "Carmenere CASA SILVA Colección Tinto 750 cc",
+    "NormalPrice": "$469",
+    "SantanderPrice": "$399"
+  },
+  {
+    "Marca": "ESCORIHUELA GASCÓN",
+    "Descripcion": "Malbec ESCORIHUELA GASCÓN Tinto 750 cc",
+    "NormalPrice": "$730",
+    "SantanderPrice": "$621"
+  },
+  {
+    "Marca": "Viña Concha y Toro",
+    "Descripcion": "Dark Blend Diablo tinto",
+    "NormalPrice": "$869",
+    "SantanderPrice": "$739"
+  },
+  {
+    "Marca": "Bodega Catena Zapata",
+    "Descripcion": "Malbec NICASIA Tinto",
+    "NormalPrice": "$675",
+    "SantanderPrice": "$574"
+  },
+  {
+    "Marca": "Finca Las Moras",
+    "Descripcion": "Malbec LAS MORAS Tinto",
+    "NormalPrice": "$289",
+    "SantanderPrice": "$246"
+  },
+  {
+    "Marca": "Viña Concha y Toro",
+    "Descripcion": "Carmenere Reservado CONCHA Y TORO Tinto",
+    "NormalPrice": "$290",
+    "SantanderPrice": "$245"
+  },
+  {
+    "Marca": "Bodega Nieto Senetiner",
+    "Descripcion": "Malbec D.O.C. Nieto Senetiner Tinto",
+    "NormalPrice": "$575",
+    "SantanderPrice": "$489"
+  },
+  {
+    "Marca": "Bodega Catena Zapata",
+    "Descripcion": "Malbec Saint FELICIEN Tinto",
+    "NormalPrice": "$805",
+    "SantanderPrice": "$684"
+  },
+  {
+    "Marca": "Km. 0",
+    "Descripcion": "Vino Malbec Reserva Km. 0 750 ml",
+    "NormalPrice": "$315",
+    "SantanderPrice": "$268"
+  },
+  {
+    "Marca": "LUIGI BOSCA",
+    "Descripcion": "Vino Tinto Malbec De Sangre LUIGI BOSCA 750 ml",
+    "NormalPrice": "$1.140",
+    "SantanderPrice": "$969"
+  },
+  {
+    "Marca": "NOVECENTO",
+    "Descripcion": "Vino blanco Blend de blancas NOVECENTO 750 ml",
+    "NormalPrice": "$250",
+    "SantanderPrice": "$213"
+  },
+  {
+    "Marca": "CORDERO CON PIEL DE LOBO",
+    "Descripcion": "Vino tinto cabernet sauvignon CORDERO CON PIEL DE LOBO 750 cc",
+    "NormalPrice": "$499",
+    "SantanderPrice": "$424"
+  },
+  {
+    "Marca": "CORDERO CON PIEL DE LOBO",
+    "Descripcion": "Vino tinto malbec CORDERO CON PIEL DE LOBO 750 cc",
+    "NormalPrice": "$499",
+    "SantanderPrice": "$424"
+  },
+  {
+    "Marca": "Bodega La Rural",
+    "Descripcion": "Vino tinto Malbec Roble SAN FELIPE 750 ml",
+    "NormalPrice": "$529",
+    "SantanderPrice": "$450"
+  },
+  {
+    "Marca": "TOSCANINI",
+    "Descripcion": "Vino tinto Tannat Cabernet TOSCANINI Barrel Select 750 ml",
+    "NormalPrice": "$539",
+    "SantanderPrice": "$479"
+  },
+  {
+    "Marca": "TOSCANINI",
+    "Descripcion": "Vino Tinto Tannat Toscanini Barrel Selection 750 ml",
+    "NormalPrice": "$539",
+    "SantanderPrice": "$479"
+  },
+  {
+    "Marca": "BODEGAS LÓPEZ",
+    "Descripcion": "Vino tinto Malbec LOPEZ 750 ml",
+    "NormalPrice": "$390",
+    "SantanderPrice": "$332"
+  },
+  {
+    "Marca": "EL ESTECO",
+    "Descripcion": "Vino Tinto Cabernet Sauvignon EL ESTECO 750 ml",
+    "NormalPrice": "$979",
+    "SantanderPrice": "$832"
+  },
+  {
+    "Marca": "BODEGA SPINOGLIO",
+    "Descripcion": "Vino Tinto Cabernet Franc BODEGA SPINOGLIO Single Vineya 750 ml",
+    "NormalPrice": "$829",
+    "SantanderPrice": "$750"
+  },
+  {
+    "Marca": "CASA SILVA",
+    "Descripcion": "Merlot CASA SILVA Colección Tinto 750 cc",
+    "NormalPrice": "$469",
+    "SantanderPrice": "$399"
+  },
+  {
+    "Marca": "BODEGA PIZZORNO",
+    "Descripcion": "Vino Sauvignon Blanc DON PROSPERO 750 ml",
+    "NormalPrice": "$425",
+    "SantanderPrice": "$370"
+  },
+  {
+    "Marca": "CERRO DEL TORO",
+    "Descripcion": "Vino blanco Albariño CERRO DEL TORO 750 ml",
+    "NormalPrice": "$1.770",
+    "SantanderPrice": "$475"
+  },
+  {
+    "Marca": "Concha y Toro",
+    "Descripcion": "Cabernet Sauvignon Reserva Especial CASILLERO DEL DIABLO Tinto 750 cc",
+    "NormalPrice": "$599",
+    "SantanderPrice": "$509"
+  },
+  {
+    "Marca": "ESCORIHUELA GASCÓN",
+    "Descripcion": "Malbec FAMILIA GASCÓN Tinto 750 cc",
+    "NormalPrice": "$525",
+    "SantanderPrice": "$446"
+  },
+  {
+    "Marca": "Establecimiento Juanicó",
+    "Descripcion": "Coastal Tannat DON PASCUAL Tinto 750 cc",
+    "NormalPrice": "$405",
+    "SantanderPrice": "$379"
+  },
+  {
+    "Marca": "Bodegas Valentín Bianchi",
+    "Descripcion": "Malbec DON VALENTIN Lacrado Tinto 750 cc",
+    "NormalPrice": "$290",
+    "SantanderPrice": "$269"
+  }
+]

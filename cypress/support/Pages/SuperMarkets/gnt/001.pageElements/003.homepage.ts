@@ -1,5 +1,5 @@
-import  GntUrls  from './urls';
-export default class GntHomePage extends GntUrls {
+import  Header  from './002.header';
+export default class GntHomePage extends Header {
     constructor(){
         super();  
     }

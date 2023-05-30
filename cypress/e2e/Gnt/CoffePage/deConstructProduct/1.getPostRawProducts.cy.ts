@@ -1,18 +1,18 @@
 /// <reference types="cypress" />
-import {gntHomePage, gntDeConstructCoffePage, gntStoreProducts} from '../../../../support/Pages/SuperMarkets'
+import {gntGlobalElements, gntDeConstructCoffePage, gntStoreProducts} from '../../../../support/Pages/SuperMarkets'
 
 describe('Get the page information',()=>{
     it('Get to the coffe page', ()=>{
-        gntHomePage.visitHomepage();
+        gntGlobalElements.visitHomePage();
         cy.url().should('eq', 'https://www.geant.com.uy/')
-        gntHomePage.typeSearchInput('Cafe');  
-        gntHomePage.clickSeeAllProducts();   
+        gntGlobalElements.typeSearchInput('Cafe');  
+        gntGlobalElements.clickSeeAllProducts();   
     })
     it('Store Coffee products', ()=>{
-        gntDeConstructCoffePage.coffeePage();
+        gntGlobalElements.coffeePage();
         cy.url().should('include', 'cafe')
         gntStoreProducts.storeProducts( //get Products
-            gntDeConstructCoffePage.elementsCoffePage.eachBox(), 'not.be.null', 'not.be.empty')
+            gntDeConstructCoffePage.gntElements.eachBox(), 'not.be.null', 'not.be.empty')
     })
     it('Unify Arrays', ()=>{
         gntStoreProducts.unifyArrays('not.be.null', 'not.be.empty') //Umify all Arrays
