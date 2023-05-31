@@ -33,11 +33,11 @@ import GntStoreProducts from "./gnt/003.gntStoreProducts/GntStoreProducts";
 export const gntStoreProducts = new GntStoreProducts();
 
 import GntReConstructProducts from "./gnt/004.reCreateProducts/reCreateProducts";
-//Reconstruct Coffe page
+//Reconstruct Coffe page object
 export const gntReConstructCoffeProducts= new GntReConstructProducts(gntDeConstructCoffePage.gntRawJson); 
-//Reconstruct Atun page
+//Reconstruct Atun page object
 export const gntReConstructAtunPage= new GntReConstructProducts(gntDeConstructAtunPage.gntRawJson); 
-//Reconstruct Wine page
+//Reconstruct Wine page object
 export const gntReConstructWinePage = new GntReConstructProducts(gntDeConstructWinePage.gntRawJson); 
 
 

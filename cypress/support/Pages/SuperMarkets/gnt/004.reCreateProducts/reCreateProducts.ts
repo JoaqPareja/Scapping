@@ -16,9 +16,7 @@ export default class GntReConstructProducts{
     private tempElement:any;
     constructor(private rawJson:string){
         rawJson;
-    }
-  
-       
+    }     
     readfile(Assertion1:string, Assertion2:string, Assertion3:string, Assertion4:string){
         cy.readFile(this.rawJson).then((str:any)=>{
             cy.wrap(str).should(Assertion1)
@@ -50,8 +48,7 @@ export default class GntReConstructProducts{
                         this.arrayOfPrecios.push(this.tempElement[0][0]); 
                         // Le digo que empuje la posicionion [0][0] ya que en esta estoy accediendo dentro de ambos corchetes creados asi solo empujo el corchete '{}'
                     })  
-                }
-                             
+                }             
             }     
         }
     }
@@ -78,7 +75,6 @@ export default class GntReConstructProducts{
                 }          
         }   
      }
-    
     }
     createNormalPrices(){
         for (let index = 0; index < this.arrayCoffeeListArray.length; index++) {
@@ -106,6 +102,5 @@ export default class GntReConstructProducts{
              cy.wrap(str.SantanderPrice).should(Asseertion1);
          }
         })
-
     }
 }
