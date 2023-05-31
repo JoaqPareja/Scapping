@@ -1,9 +1,7 @@
 /// <reference types="cypress" />
-import {gntReConstructCoffeProducts} from '../../../../support/Pages/SuperMarkets'
+import {gntCoffePageElements,gntReConstructCoffeProducts} from '../../../../support/Pages/SuperMarkets'
 
 describe('Re convert products Check normal and santander prices',()=>{
-    let gntNewJsonCoffee:string ="cypress/fixtures/gntReConCoffeeProduct.json"
-
     beforeEach('Get products',()=>{
         gntReConstructCoffeProducts.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
     })
@@ -57,8 +55,8 @@ describe('Re convert products Check normal and santander prices',()=>{
     })
     it('push into new Json',()=>{
         // cy.wrap(reConstructCoffePage.productBrand).pause();
-        gntReConstructCoffeProducts.pushJson(gntNewJsonCoffee, gntReConstructCoffeProducts.arrayOfPrecios);
-        gntReConstructCoffeProducts.readJson(gntNewJsonCoffee, 'not.be.empty')
+        gntReConstructCoffeProducts.pushJson(gntCoffePageElements.gntNewJson, gntReConstructCoffeProducts.arrayOfPrecios);
+        gntReConstructCoffeProducts.readJson(gntCoffePageElements.gntNewJson, 'not.be.empty')
     })
  
 })

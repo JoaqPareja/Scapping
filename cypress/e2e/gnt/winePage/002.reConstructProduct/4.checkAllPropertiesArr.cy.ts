@@ -1,11 +1,10 @@
 /// <reference types="cypress" />
-// import {gntReConstructCoffePage} from '../../../../support/Pages/SuperMarkets'
+import {gntWinePageElements} from '../../../../support/Pages/SuperMarkets'
 
-describe('Concat both arrays and check them',{defaultCommandTimeout:10000}, ()=>{
+describe('Concat both arrays and check them', ()=>{
     let arrayTepm:Array<string>=[];
-    let gntNewJson:string ="cypress/fixtures/gntReConWineProduct.json"
     beforeEach('Get products',()=>{
-        cy.readFile(gntNewJson).then((data)=>{
+        cy.readFile(gntWinePageElements.gntNewJson).then((data)=>{
             arrayTepm = data;
         })
     })
@@ -41,9 +40,6 @@ describe('Concat both arrays and check them',{defaultCommandTimeout:10000}, ()=>
             else{
                 cy.log('The property Santander price does Not exist')
             }
-       
         })
-       
     })
- 
-    })
+})

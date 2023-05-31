@@ -1,12 +1,10 @@
 /// <reference types="cypress" />
-// import {gntReConstructCoffePage} from '../../../../support/Pages/SuperMarkets'
+import {gntCoffePageElements} from '../../../../support/Pages/SuperMarkets'
 
 describe('Concat both arrays and check them', ()=>{
     let arrayTepm:Array<string>=[];
-    let gntNewJsonCoffee:string ="cypress/fixtures/gntReConCoffeeProduct.json"
-
     beforeEach('Get products',()=>{
-        cy.readFile(gntNewJsonCoffee).then((data)=>{
+        cy.readFile(gntCoffePageElements.gntNewJson).then((data)=>{
             arrayTepm = data;
         })
     })

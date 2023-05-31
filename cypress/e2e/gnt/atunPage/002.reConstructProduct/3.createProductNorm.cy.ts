@@ -1,12 +1,11 @@
 /// <reference types="cypress" />
-import {gntReConstructAtunPage} from '../../../../support/Pages/SuperMarkets'
+import {gntAtunPageElements, gntReConstructAtunPage} from '../../../../support/Pages/SuperMarkets'
 
 describe('Construct normal',()=>{ 
     let arrayTepm:Array<string>=[];
-    let gntNewJson:string ="cypress/fixtures/gntReConAtunProduct.json"
     beforeEach('Get products',()=>{
         gntReConstructAtunPage.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
-    cy.readFile(gntNewJson).then((data)=>{
+    cy.readFile(gntAtunPageElements.gntNewJson).then((data)=>{
         arrayTepm =data;
         
     })
@@ -41,7 +40,9 @@ it('Unify arrays',()=>{
 })
 
 it('push into new Json',()=>{
-    gntReConstructAtunPage.pushJson(gntNewJson, gntReConstructAtunPage.newArrayCoffeeListArray);
-    gntReConstructAtunPage.readJson(gntNewJson, 'not.be.empty')
+    gntReConstructAtunPage.pushJson(gntAtunPageElements.gntNewJson, gntReConstructAtunPage.newArrayCoffeeListArray);
+})
+it('Read json', ()=>{
+    gntReConstructAtunPage.readJson(gntAtunPageElements.gntNewJson, 'not.be.empty')
 })
 })

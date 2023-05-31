@@ -1,13 +1,11 @@
 /// <reference types="cypress" />
-import {gntReConstructWinePage} from '../../../../support/Pages/SuperMarkets'
+import {gntWinePageElements,gntReConstructWinePage} from '../../../../support/Pages/SuperMarkets'
 
 describe('Construct USD Prices',()=>{
     let arrayTepm:any;
-    let gntNewJson:string ="cypress/fixtures/gntReConWineProduct.json"
     beforeEach('Get products',()=>{
-        
         gntReConstructWinePage.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
-        cy.readFile(gntNewJson).then((data:any)=>{
+        cy.readFile(gntWinePageElements.gntNewJson).then((data:any)=>{
             arrayTepm= data
         })  
     })
@@ -55,11 +53,11 @@ describe('Construct USD Prices',()=>{
     it('Unify arrays',()=>{
         gntReConstructWinePage.unifyArrays(arrayTepm, gntReConstructWinePage.arrayOfUSDPrecios, )
     })
-  
     it('Push Arrs',()=>{
-       
-        gntReConstructWinePage.pushJson(gntNewJson, gntReConstructWinePage.newArrayCoffeeListArray);
-        gntReConstructWinePage.readJson(gntNewJson, 'not.be.empty')
+        gntReConstructWinePage.pushJson(gntWinePageElements.gntNewJson, gntReConstructWinePage.newArrayCoffeeListArray);
+    })
+    it('Read json', ()=>{
+        gntReConstructWinePage.readJson(gntWinePageElements.gntNewJson, 'not.be.empty')
     })
 })
 

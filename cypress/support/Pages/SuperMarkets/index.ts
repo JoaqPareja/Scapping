@@ -14,30 +14,30 @@ export const dvtDeConstructCoffePage = new DvtDeConstructCoffeePage();
 //passing the argument needed From the class 
 
 //Basic elements
-import GntGlobalElements from "./gnt/001.pageElements/005.gntGlobalElements";
+import GntGlobalElements from "./gnt/001.pageElements/globalElements/004.gntGlobalElements";
 export const gntGlobalElements = new GntGlobalElements();
-
-//Creating specific object from Specific Coffe elements class
-import CoffePage from "./gnt/002.productsPages/coffeePage/coffePage"
-export const gntDeConstructCoffePage = new CoffePage();
 
 //Creating specific object from Specific Atun elements class
 import AtunPage from "./gnt/002.productsPages/atunPage/atunPage"
-export const gntDeConstructAtunPage = new AtunPage();
+export const gntAtunPageElements = new AtunPage();
+
+//Creating specific object from Specific Coffe elements class
+import CoffePage from "./gnt/002.productsPages/coffeePage/coffePage"
+export const gntCoffePageElements = new CoffePage();
 
 //Creating specific object from Specific Wine elements class
 import WinePage from "./gnt/002.productsPages/winePage/winePage"
-export const gntDeConstructWinePage = new WinePage();
+export const gntWinePageElements = new WinePage();
 
 import GntStoreProducts from "./gnt/003.gntStoreProducts/GntStoreProducts";
 export const gntStoreProducts = new GntStoreProducts();
 
 import GntReConstructProducts from "./gnt/004.reCreateProducts/reCreateProducts";
-//Reconstruct Coffe page object
-export const gntReConstructCoffeProducts= new GntReConstructProducts(gntDeConstructCoffePage.gntRawJson); 
 //Reconstruct Atun page object
-export const gntReConstructAtunPage= new GntReConstructProducts(gntDeConstructAtunPage.gntRawJson); 
+export const gntReConstructAtunPage= new GntReConstructProducts(gntAtunPageElements.gntRawJson); 
+//Reconstruct Coffe page object
+export const gntReConstructCoffeProducts= new GntReConstructProducts(gntCoffePageElements.gntRawJson); 
 //Reconstruct Wine page object
-export const gntReConstructWinePage = new GntReConstructProducts(gntDeConstructWinePage.gntRawJson); 
+export const gntReConstructWinePage = new GntReConstructProducts(gntWinePageElements.gntRawJson); 
 
 

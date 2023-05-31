@@ -1,9 +1,7 @@
 /// <reference types="cypress" />
-import {gntReConstructAtunPage} from '../../../../support/Pages/SuperMarkets'
+import {gntAtunPageElements,gntReConstructAtunPage} from '../../../../support/Pages/SuperMarkets'
 
 describe('Re convert products Check normal and santander prices',()=>{
-    let gntNewJson:string ="cypress/fixtures/gntReConAtunProduct.json"
-
     beforeEach('Get products',()=>{
         gntReConstructAtunPage.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
     })
@@ -13,8 +11,7 @@ describe('Re convert products Check normal and santander prices',()=>{
             cy.wrap(gntReConstructAtunPage.arrayCoffeeListArray).should('not.be.empty')
         })
         it('convert array of normal prices and santander prices',()=>{
-            gntReConstructAtunPage.createArrNormalAndSantanderPrices();
-           
+            gntReConstructAtunPage.createArrNormalAndSantanderPrices();    
         })
         it('Check Marca',()=>{
                      cy.wrap(gntReConstructAtunPage.arrayOfPrecios).each((txt:any)=>{   
@@ -57,8 +54,9 @@ describe('Re convert products Check normal and santander prices',()=>{
     })
     it('push into new Json',()=>{
         // cy.wrap(reConstructCoffePage.productBrand).pause();
-        gntReConstructAtunPage.pushJson(gntNewJson, gntReConstructAtunPage.arrayOfPrecios);
-        gntReConstructAtunPage.readJson(gntNewJson, 'not.be.empty')
+        gntReConstructAtunPage.pushJson(gntAtunPageElements.gntNewJson, gntReConstructAtunPage.arrayOfPrecios);
     })
- 
+    it('Read json', ()=>{
+        gntReConstructAtunPage.readJson(gntAtunPageElements.gntNewJson, 'not.be.empty')
+    })
 })

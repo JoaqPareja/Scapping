@@ -1,14 +1,12 @@
 /// <reference types="cypress" />
-import {gntReConstructCoffeProducts} from '../../../../support/Pages/SuperMarkets'
+import {gntCoffePageElements,gntReConstructCoffeProducts} from '../../../../support/Pages/SuperMarkets'
 
 describe('Construct USD Prices',()=>{
     let arrayTepm:any;
-    let gntNewJsonCoffee:string ="cypress/fixtures/gntReConCoffeeProduct.json"
-
     beforeEach('Get products',()=>{
         
         gntReConstructCoffeProducts.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
-        cy.readFile(gntNewJsonCoffee).then((data:any)=>{
+        cy.readFile(gntCoffePageElements.gntNewJson).then((data:any)=>{
             arrayTepm= data
             // arrayTepm = data;
             // cy.wrap(arrayTepm).each((txt)=>{
@@ -68,8 +66,8 @@ describe('Construct USD Prices',()=>{
   
     it('Push Arrs',()=>{
        
-        gntReConstructCoffeProducts.pushJson(gntNewJsonCoffee, gntReConstructCoffeProducts.newArrayCoffeeListArray);
-        gntReConstructCoffeProducts.readJson(gntNewJsonCoffee, 'not.be.empty')
+        gntReConstructCoffeProducts.pushJson(gntCoffePageElements.gntNewJson, gntReConstructCoffeProducts.newArrayCoffeeListArray);
+        gntReConstructCoffeProducts.readJson(gntCoffePageElements.gntNewJson, 'not.be.empty')
     })
 })
 

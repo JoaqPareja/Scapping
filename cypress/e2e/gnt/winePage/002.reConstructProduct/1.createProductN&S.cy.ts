@@ -1,9 +1,7 @@
 /// <reference types="cypress" />
-import {gntReConstructWinePage} from '../../../../support/Pages/SuperMarkets'
+import {gntWinePageElements,gntReConstructWinePage} from '../../../../support/Pages/SuperMarkets'
 
 describe('Re convert products Check normal and santander prices',()=>{
-    let gntNewJson:string ="cypress/fixtures/gntReConWineProduct.json"
-
     beforeEach('Get products',()=>{
         gntReConstructWinePage.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
     })
@@ -57,8 +55,10 @@ describe('Re convert products Check normal and santander prices',()=>{
     })
     it('push into new Json',()=>{
         // cy.wrap(reConstructCoffePage.productBrand).pause();
-        gntReConstructWinePage.pushJson(gntNewJson, gntReConstructWinePage.arrayOfPrecios);
-        gntReConstructWinePage.readJson(gntNewJson, 'not.be.empty')
+        gntReConstructWinePage.pushJson(gntWinePageElements.gntNewJson, gntReConstructWinePage.arrayOfPrecios);
+    })
+    it('Read json', ()=>{
+        gntReConstructWinePage.readJson(gntWinePageElements.gntNewJson, 'not.be.empty')
     })
  
 })
