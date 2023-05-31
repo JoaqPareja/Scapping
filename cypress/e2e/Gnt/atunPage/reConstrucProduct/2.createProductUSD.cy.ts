@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import {gntReConstructCoffeProducts} from '../../../../support/Pages/SuperMarkets'
+import {gntReConstructAtunPage} from '../../../../support/Pages/SuperMarkets'
 
 describe('Construct USD Prices',()=>{
     let arrayTepm:any;
@@ -7,7 +7,7 @@ describe('Construct USD Prices',()=>{
 
     beforeEach('Get products',()=>{
         
-        gntReConstructCoffeProducts.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
+        gntReConstructAtunPage.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
         cy.readFile(gntNewJsonCoffee).then((data:any)=>{
             arrayTepm= data
             // arrayTepm = data;
@@ -22,15 +22,15 @@ describe('Construct USD Prices',()=>{
     it('reCreateProduct',()=>{ 
         
         // JSON.parse(arrayTepm);
-        cy.reCreateProduct(gntReConstructCoffeProducts.productBrand, gntReConstructCoffeProducts.elements, gntReConstructCoffeProducts.titleProduct, 
-            gntReConstructCoffeProducts.priceProduct, gntReConstructCoffeProducts.arrayCoffeeListArray)
-                            cy.wrap(gntReConstructCoffeProducts.arrayCoffeeListArray).should('not.be.empty')
+        cy.reCreateProduct(gntReConstructAtunPage.productBrand, gntReConstructAtunPage.elements, gntReConstructAtunPage.titleProduct, 
+            gntReConstructAtunPage.priceProduct, gntReConstructAtunPage.arrayCoffeeListArray)
+                            cy.wrap(gntReConstructAtunPage.arrayCoffeeListArray).should('not.be.empty')
                         })
     it('Get the USD prices', ()=>{
-        gntReConstructCoffeProducts.createUSDPrices();
+        gntReConstructAtunPage.createUSDPrices();
     })
     it('Check Marca',()=>{   
-            cy.wrap(gntReConstructCoffeProducts.arrayOfUSDPrecios).each((txt:any)=>{   
+            cy.wrap(gntReConstructAtunPage.arrayOfUSDPrecios).each((txt:any)=>{   
                 //This is purely to check if property exist using a conditional (ternary) operator
                 txt&&txt.Marca?(
                         cy.log('Marca property'),
@@ -42,19 +42,19 @@ describe('Construct USD Prices',()=>{
             })
     })
     it('Check Description',()=>{
-        cy.wrap(gntReConstructCoffeProducts.arrayOfUSDPrecios).each((txt:any)=>{  
+        cy.wrap(gntReConstructAtunPage.arrayOfUSDPrecios).each((txt:any)=>{  
             cy.log('Desription property')
             cy.wrap(txt.Descripcion).should('not.be.empty')                   
         })
     })
     it('Check  Normal Price', ()=>{
-        cy.wrap(gntReConstructCoffeProducts.arrayOfUSDPrecios).each((txt:any)=>{   
+        cy.wrap(gntReConstructAtunPage.arrayOfUSDPrecios).each((txt:any)=>{   
             cy.log('Property of NormalPrice')
             cy.wrap(txt.NormalPrice).should('not.contain', 'abcdefghijklmnñopqrstuvwxyz')
         })
     })
     it('Check SantanderPrice', ()=>{
-        cy.wrap(gntReConstructCoffeProducts.arrayOfUSDPrecios).each((txt:any)=>{   
+        cy.wrap(gntReConstructAtunPage.arrayOfUSDPrecios).each((txt:any)=>{   
         if(txt.SantanderPrice){
             cy.log('Property of SantanderPrice')
             cy.wrap(txt.SantanderPrice).should('not.be.empty'),
@@ -63,13 +63,13 @@ describe('Construct USD Prices',()=>{
     })
     })
     it('Unify arrays',()=>{
-        gntReConstructCoffeProducts.unifyArrays(arrayTepm, gntReConstructCoffeProducts.arrayOfUSDPrecios, )
+        gntReConstructAtunPage.unifyArrays(arrayTepm, gntReConstructAtunPage.arrayOfUSDPrecios, )
     })
   
     it('Push Arrs',()=>{
        
-        gntReConstructCoffeProducts.pushJson(gntNewJsonCoffee, gntReConstructCoffeProducts.newArrayCoffeeListArray);
-        gntReConstructCoffeProducts.readJson(gntNewJsonCoffee, 'not.be.empty')
+        gntReConstructAtunPage.pushJson(gntNewJsonCoffee, gntReConstructAtunPage.newArrayCoffeeListArray);
+        gntReConstructAtunPage.readJson(gntNewJsonCoffee, 'not.be.empty')
     })
 })
 

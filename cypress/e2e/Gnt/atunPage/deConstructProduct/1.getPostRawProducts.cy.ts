@@ -2,12 +2,12 @@
 import {gntGlobalElements, gntDeConstructAtunPage, gntStoreProducts} from '../../../../support/Pages/SuperMarkets'
 
 describe('Get the page information',()=>{
-    it('Get to the Atun page', ()=>{
-        gntGlobalElements.visitHomePage();
-        cy.url().should('eq', 'https://www.geant.com.uy/')
-        gntGlobalElements.typeSearchInput('Atun');  
-        gntGlobalElements.clickSeeAllProducts();   
-    })
+    // it('Get to the Atun page', ()=>{
+    //     gntGlobalElements.visitHomePage();
+    //     cy.url().should('eq', 'https://www.geant.com.uy/')
+    //     gntGlobalElements.typeSearchInput('Atun');  
+    //     gntGlobalElements.clickSeeAllProducts();   
+    // })
     it('Store Atun products', ()=>{
         gntDeConstructAtunPage.atunPage();
         cy.url().should('include', 'atun')

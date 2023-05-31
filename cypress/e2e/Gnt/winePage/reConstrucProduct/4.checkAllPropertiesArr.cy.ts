@@ -3,9 +3,9 @@
 
 describe('Concat both arrays and check them',{defaultCommandTimeout:10000}, ()=>{
     let arrayTepm:Array<string>=[];
-    let gntNewJsonCoffee:string ="cypress/fixtures/gntReConWineProduct.json"
+    let gntNewJson:string ="cypress/fixtures/gntReConWineProduct.json"
     beforeEach('Get products',()=>{
-        cy.readFile(gntNewJsonCoffee).then((data)=>{
+        cy.readFile(gntNewJson).then((data)=>{
             arrayTepm = data;
         })
     })

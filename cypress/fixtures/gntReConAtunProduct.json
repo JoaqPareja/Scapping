@@ -1,13 +1,13 @@
 [
   {
-    "Marca": "GOMES DA COSTA",
-    "Descripcion": "Atún trozos en aceite GOMES DA COSTA 170 g",
-    "NormalPrice": "$103"
-  },
-  {
     "Marca": "EMIGRANTE",
     "Descripcion": "Atún lomito al natural EMIGRANTE 170 g",
     "NormalPrice": "$128"
+  },
+  {
+    "Marca": "GOMES DA COSTA",
+    "Descripcion": "Atún trozos en aceite GOMES DA COSTA 170 g",
+    "NormalPrice": "$103"
   },
   {
     "Marca": "HELLMANN'S",
@@ -100,6 +100,11 @@
     "NormalPrice": "$448"
   },
   {
+    "Marca": "EMIGRANTE",
+    "Descripcion": "Atún lomito al natural EMIGRANTE 170 g",
+    "NormalPrice": "$128"
+  },
+  {
     "Marca": "PRECIO LÍDER",
     "Descripcion": "Atún lomito al natural PRECIO LÍDER tripack 240 g",
     "NormalPrice": "$190",
@@ -115,11 +120,6 @@
     "Descripcion": "Atún desmenuzado LEADER PRICE al natural 170 g",
     "NormalPrice": "$55",
     "SantanderPrice": "$45"
-  },
-  {
-    "Marca": "EMIGRANTE",
-    "Descripcion": "Atún lomito al natural EMIGRANTE 170 g",
-    "NormalPrice": "$128"
   },
   {
     "Marca": "PRECIO LÍDER",

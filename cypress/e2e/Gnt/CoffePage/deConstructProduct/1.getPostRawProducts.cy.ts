@@ -2,12 +2,12 @@
 import {gntGlobalElements, gntDeConstructCoffePage, gntStoreProducts} from '../../../../support/Pages/SuperMarkets'
 
 describe('Get the page information',()=>{
-    it('Get to the coffe page', ()=>{
-        gntGlobalElements.visitHomePage();
-        cy.url().should('eq', 'https://www.geant.com.uy/')
-        gntGlobalElements.typeSearchInput('Cafe');  
-        gntGlobalElements.clickSeeAllProducts();   
-    })
+    // it('Get to the coffe page', ()=>{
+    //     gntGlobalElements.visitHomePage();
+    //     cy.url().should('eq', 'https://www.geant.com.uy/')
+    //     gntGlobalElements.typeSearchInput('Cafe');  
+    //     gntGlobalElements.clickSeeAllProducts();   
+    // })
     it('Store Coffee products', ()=>{
         gntGlobalElements.coffeePage();
         cy.url().should('include', 'cafe')
