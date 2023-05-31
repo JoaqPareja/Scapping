@@ -36,10 +36,10 @@ export const gntStoreProducts = new GntStoreProducts();
 
 import GntReConstructProducts from "../SuperMarkets/gnt/004.reCreateProducts/reCreateProducts";
 //Reconstruct Coffe page
-export const gntReConstructCoffeProducts= new GntReConstructProducts(gntDeConstructCoffePage.gntRawJsonCoffee); 
+export const gntReConstructCoffeProducts= new GntReConstructProducts(gntDeConstructCoffePage.gntRawJson); 
 //Reconstruct Atun page
-export const gntReConstructAtunPage= new GntReConstructProducts(gntDeConstructAtunPage.gntRawJsonCoffee); 
+export const gntReConstructAtunPage= new GntReConstructProducts(gntDeConstructAtunPage.gntRawJson); 
 //Reconstruct Wine page
-export const gntReConstructWinePage = new GntReConstructProducts(gntDeConstructWinePage.gntRawJsonCoffee); 
+export const gntReConstructWinePage = new GntReConstructProducts(gntDeConstructWinePage.gntRawJson); 
 
 

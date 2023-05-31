@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import {gntGlobalElements, gntDeConstructAtunPage, gntStoreProducts} from '../../../../support/Pages/SuperMarkets'
+import { gntDeConstructAtunPage, gntStoreProducts} from '../../../../support/Pages/SuperMarkets'
 
 describe('Get the page information',()=>{
     // it('Get to the Atun page', ()=>{
@@ -18,7 +18,7 @@ describe('Get the page information',()=>{
         gntStoreProducts.unifyArrays('not.be.null', 'not.be.empty') //Umify all Arrays
     })
     it('Push ProductArray', ()=>{
-        gntStoreProducts.writefile(gntDeConstructAtunPage.gntRawJsonCoffee)  //Post JSON
+        gntStoreProducts.writefile(gntDeConstructAtunPage.gntRawJson)  //Post JSON
     })
 
 })

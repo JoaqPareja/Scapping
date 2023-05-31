@@ -3,10 +3,10 @@ import {gntReConstructWinePage} from '../../../../support/Pages/SuperMarkets'
 
 describe('Construct normal',()=>{ 
     let arrayTepm:Array<string>=[];
-    let gntNewJsonCoffee:string ="cypress/fixtures/gntReConWineProduct.json"
+    let gntNewJson:string ="cypress/fixtures/gntReConWineProduct.json"
     beforeEach('Get products',()=>{
         gntReConstructWinePage.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
-    cy.readFile(gntNewJsonCoffee).then((data)=>{
+    cy.readFile(gntNewJson).then((data)=>{
         arrayTepm =data;
         
     })
@@ -41,7 +41,7 @@ it('Unify arrays',()=>{
 })
 
 it('push into new Json',()=>{
-    gntReConstructWinePage.pushJson(gntNewJsonCoffee, gntReConstructWinePage.newArrayCoffeeListArray);
-    gntReConstructWinePage.readJson(gntNewJsonCoffee, 'not.be.empty')
+    gntReConstructWinePage.pushJson(gntNewJson, gntReConstructWinePage.newArrayCoffeeListArray);
+    gntReConstructWinePage.readJson(gntNewJson, 'not.be.empty')
 })
 })

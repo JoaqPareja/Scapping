@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import {gntGlobalElements, gntDeConstructWinePage, gntStoreProducts} from '../../../../support/Pages/SuperMarkets'
+import { gntDeConstructWinePage, gntStoreProducts} from '../../../../support/Pages/SuperMarkets'
 
 describe('Get the page information',()=>{
     // it('Get to the Wine page', ()=>{
@@ -9,7 +9,7 @@ describe('Get the page information',()=>{
     //     gntGlobalElements.clickSeeAllProducts();   
     // })
     it('Store Wine products', ()=>{
-        gntGlobalElements.winePage();
+        gntDeConstructWinePage.winePage();
         cy.url().should('include', 'vino')
         gntStoreProducts.storeProducts( //get Products
             gntDeConstructWinePage.gntElements.eachBox(), 'not.be.null', 'not.be.empty')
@@ -18,7 +18,7 @@ describe('Get the page information',()=>{
         gntStoreProducts.unifyArrays('not.be.null', 'not.be.empty') //Umify all Arrays
     })
     it('Push ProductArray', ()=>{
-        gntStoreProducts.writefile(gntDeConstructWinePage.gntRawJsonCoffee)  //Post JSON
+        gntStoreProducts.writefile(gntDeConstructWinePage.gntRawJson)  //Post JSON
     })
 
 })

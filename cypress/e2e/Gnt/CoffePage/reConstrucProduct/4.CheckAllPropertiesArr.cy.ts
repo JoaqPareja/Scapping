@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 // import {gntReConstructCoffePage} from '../../../../support/Pages/SuperMarkets'
 
-describe('Concat both arrays and check them',{defaultCommandTimeout:10000}, ()=>{
+describe('Concat both arrays and check them', ()=>{
     let arrayTepm:Array<string>=[];
     let gntNewJsonCoffee:string ="cypress/fixtures/gntReConCoffeeProduct.json"
 

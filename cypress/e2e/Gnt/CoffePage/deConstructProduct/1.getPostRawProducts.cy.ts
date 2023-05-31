@@ -9,7 +9,7 @@ describe('Get the page information',()=>{
     //     gntGlobalElements.clickSeeAllProducts();   
     // })
     it('Store Coffee products', ()=>{
-        gntGlobalElements.coffeePage();
+        gntDeConstructCoffePage.coffeePage();
         cy.url().should('include', 'cafe')
         gntStoreProducts.storeProducts( //get Products
             gntDeConstructCoffePage.gntElements.eachBox(), 'not.be.null', 'not.be.empty')
@@ -18,7 +18,7 @@ describe('Get the page information',()=>{
         gntStoreProducts.unifyArrays('not.be.null', 'not.be.empty') //Umify all Arrays
     })
     it('Push ProductArray', ()=>{
-        gntStoreProducts.writefile(gntDeConstructCoffePage.gntRawJsonCoffee)  //Post JSON
+        gntStoreProducts.writefile(gntDeConstructCoffePage.gntRawJson)  //Post JSON
     })
 
 })
