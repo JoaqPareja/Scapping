@@ -1,10 +1,10 @@
 
 
 
-import DvtHomePage from "../SuperMarkets/dvt/homepage"
+import DvtHomePage from "./dvt/homepage"
 export const dvtHomePage = new DvtHomePage();
 // dvt/ /dvt/coffePage/1.getPostProducts
-import DvtDeConstructCoffeePage from "../SuperMarkets/dvt/coffePage/1.getPostProducts"
+import DvtDeConstructCoffeePage from "./dvt/coffePage/1.getPostProducts"
 export const dvtDeConstructCoffePage = new DvtDeConstructCoffeePage();
 
 //Create Basic Global Elements
