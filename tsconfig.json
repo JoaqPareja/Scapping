@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "browser": {
+      "[module-name]": false   
+    },
       "target": "es5",
       "lib": [
           "es5",
@@ -15,5 +18,5 @@
       "strict": true,
       // "noImplicitAny": false
   },
-  "include": ["**/*.ts", "support/e2e.ts"]
+  "include": ["**/*.ts", "**/*.cy.ts", "support/e2e.ts"]
 }
