@@ -10,10 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "cypress": "^12.5.1",
-    "dotenv": "^16.0.3",
-    "soft-assert": "^0.2.6"
+    "dotenv": "^16.0.3"
   },
   "devDependencies": {
+    "@tsconfig/cypress": "^1.0.1",
     "@types/node": "^18.14.2",
     "cypress-wait-until": "^1.7.2",
     "typescript": "^4.9.5"
