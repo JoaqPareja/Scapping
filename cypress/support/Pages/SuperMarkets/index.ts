@@ -3,7 +3,7 @@
 
 import DvtHomePage from "./dvt/homepage"
 export const dvtHomePage = new DvtHomePage();
-import DvtDeConstructCoffeePage from "./dvt/coffePage/1.getPostProducts"
+import DvtDeConstructCoffeePage from "./dvt/coffeePage/1.getPostProducts"
 export const dvtDeConstructCoffePage = new DvtDeConstructCoffeePage();
 
 //Create Basic Global Elements
