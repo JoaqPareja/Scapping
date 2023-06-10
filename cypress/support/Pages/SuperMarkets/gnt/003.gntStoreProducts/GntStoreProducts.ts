@@ -4,6 +4,10 @@
     public priceProduct:Array<unknown> =[]; 
     public newArrayCoffeeListArray:Array<unknown> =[];
     private currentnumber:number = 0;
+    public imgsDirectories:Array<unknown> =[]; 
+    private currentImagProduct:any;
+    public currentImgsNames:Array<unknown> =[]; 
+    public currentDirectoryNames:Array<unknown> =[]; 
     // constructor(webElementCallback:any){
     //     webElementCallback;
     // }
@@ -28,15 +32,13 @@
     private getImgProduct($element:any, callbackName:string){
         cy.wrap($element).find('a > img')
             .invoke('attr', 'src').then((response:unknown)=>{
-              // cy.wrap(response).pause()
               let currentImg:any = response
               this.currentnumber = this.currentnumber +1;
-              cy.wrap(this.currentnumber)
-              cy.downloadFile(currentImg,`cypress/downloads/${callbackName}Downloads`,`${callbackName}${this.currentnumber}.jpg`)
-        })
-        
-            // cy.wrap(this.productBrand).should(Assertion1).should(Assertion2)    
-    
+              this.currentImagProduct = `${callbackName}${this.currentnumber}`
+              cy.downloadFile(currentImg,`cypress/downloads/${callbackName}Downloads`,`${this.currentImagProduct}.jpg`)
+              this.imgsDirectories.push({currentImgProduct: this.currentImagProduct, directory: `cypress/downloads/${callbackName}Downloads/${this.currentImagProduct}.jpg`})
+            })    
+            // cy.wrap(this.imgsDirectories).pause()
 }
  storeProducts(webElementCallback:any, callbackName:string){
     webElementCallback.each(($el:any)=>{
@@ -50,7 +52,7 @@
     })
  }
  unifyArrays(Asseertion1:string, Asseertion2:string){
-    this.newArrayCoffeeListArray.push(this.productBrand,this.titleProduct, this.priceProduct)
+    this.newArrayCoffeeListArray.push(this.productBrand,this.titleProduct, this.priceProduct, this.imgsDirectories)
     cy.wrap(this.newArrayCoffeeListArray).should(Asseertion1).should(Asseertion2)  
 }
  writefile(gntRawJsonCoffeeCallBack:string){
