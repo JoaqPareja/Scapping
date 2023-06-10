@@ -2,7 +2,6 @@
   [
     "AGUILA",
     "NESCAFÉ",
-    "AGUILA",
     "NESCAFÉ",
     "EL CHANA",
     "IGUACÚ",
@@ -36,7 +35,6 @@
     "SENIOR",
     "SENIOR",
     "CAMPOCLARO",
-    "NESCAFÉ",
     "BAHÍA",
     "SOROCABANA",
     "SENIOR",
@@ -49,12 +47,13 @@
     "ZAPICÁN",
     "NESCAFÉ",
     "ILLY",
-    "JUAN VALDEZ"
+    "JUAN VALDEZ",
+    "JUAN VALDEZ",
+    "SOROCABANA"
   ],
   [
     "Café instantáneo ÁGUILA 10 sticks",
     "Café BRACAFÉ n°2 100 g",
-    "Café molido ÁGUILA 300 g",
     "Café NESCAFÉ original extra fuerte + 50 g Regalo",
     "Café molido EL CHANÁ 250 g",
     "Café IGUACU sticks 1.7g x 10 unidades",
@@ -88,7 +87,6 @@
     "Café SENIOR fuerte 500 g",
     "Café descafeinado SENIOR 250 g",
     "Café instantáneo orgánico CAMPOCLARO 90 g",
-    "Café NESCAFÉ Gold Colombia 100 g",
     "Café molido BAHÍA glaseado 500 g",
     "Café molido SOROCABANA fuerte 250 g",
     "Café SENIOR tradicional 500 g",
@@ -101,12 +99,13 @@
     "Café ZAPICÁN natural sin azúcar 500 g",
     "Café Nescafé BRACAFÉ 3 en 1 10 un.",
     "Café molido ILLY espresso 250 g",
-    "Café soluble JUAN VALDEZ liofilizado premium 95 g"
+    "Café soluble JUAN VALDEZ liofilizado premium 95 g",
+    "Café molido JUAN VALDEZ espresso premium 250 g",
+    "Café molido SOROCABANA fuerte 500 g"
   ],
   [
     "$ 51",
     "$ 277",
-    "$ 248",
     "$ 429",
     "$ 289",
     "$ 40",
@@ -140,7 +139,6 @@
     "$ 446",
     "$ 342",
     "$ 320",
-    "$ 555",
     "$ 432",
     "$ 257",
     "$ 446",
@@ -153,6 +151,8 @@
     "$ 374",
     "$ 303",
     "$ 1.633",
-    "$ 646"
+    "$ 646",
+    "$ 949",
+    "$ 472"
   ]
 ]

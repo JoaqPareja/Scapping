@@ -32,17 +32,20 @@ export default class GntReConstructProducts{
         for (let index = 0; index < this.arrayCoffeeListArray.length; index++) {
             this.element = this.arrayCoffeeListArray[index];
             //Aca le voy a pedir que si el caracter 4 existe y si ademas que existe es un signo de $ 
-            if(this.element[0].Precio.charAt(3) == '$'  ||  this.element[0].Precio.charAt(4) == '$'|| this.element[0].Precio.charAt() == '$'||  this.element[0].Precio.charAt(6) == '$'){
+            if(this.element[0].Precio.charAt(3) == '$'  ||  this.element[0].Precio.charAt(4) == '$'|| this.element[0].Precio.charAt() == '$'
+                        ||  this.element[0].Precio.charAt(6) == '$'){
                 this.elements =  this.element[0].Precio.split('$')
                 let marca:Array<any>= [this.element[0].Marca]
                 let descripcion:Array<string> = [this.element[0].Descripcion]
-                if(this.element[0].Precio.charAt(3) === '$'||this.element[0].Precio.charAt(4) === '$'||this.element[0].Precio.charAt(5) === '$'||this.element[0].Precio.charAt(6) === '$' || this.element[0].Precio.charAt(7) === '$'){
+                if(this.element[0].Precio.charAt(3) === '$'||this.element[0].Precio.charAt(4) === '$'||this.element[0].Precio.charAt(5) === '$'
+                        ||this.element[0].Precio.charAt(6) === '$' || this.element[0].Precio.charAt(7) === '$'){
                     cy.wrap( this.elements).then((txt:any)=>{
                         this.tempElement = marca.map(marca => new Array({ Marca: marca, Descripcion: descripcion[0], NormalPrice:'$'+txt[1], SantanderPrice: '$'+txt[2]}))
                         this.arrayOfPrecios.push(this.tempElement[0][0]); 
                     })
                 }
-                else if(this.element[0].Precio.charAt(3) != '$'||this.element[0].Precio.charAt(4) != '$'||this.element[0].Precio.charAt(5) != '$'||this.element[0].Precio.charAt(6) != '$' || this.element[0].Precio.charAt(7) != '$'){
+                else if(this.element[0].Precio.charAt(3) != '$'||this.element[0].Precio.charAt(4) != '$'||this.element[0].Precio.charAt(5) != '$'
+                            ||this.element[0].Precio.charAt(6) != '$' || this.element[0].Precio.charAt(7) != '$'){
                     cy.wrap( this.elements).then((txt:any)=>{
                         this.tempElement = marca.map(marca => new Array({ Marca: marca, Descripcion: descripcion[0], NormalPrice:'$'+txt[1]}))
                         this.arrayOfPrecios.push(this.tempElement[0][0]); 
@@ -79,7 +82,8 @@ export default class GntReConstructProducts{
     createNormalPrices(){
         for (let index = 0; index < this.arrayCoffeeListArray.length; index++) {
             this.element = this.arrayCoffeeListArray[index];
-                if(this.element[0].Precio.charAt(3) != '$' && this.element[0].Precio.charAt(4) != '$' && this.element[0].Precio.charAt(7) !== 'U' ){                    
+                if(this.element[0].Precio.charAt(3) != '$' && this.element[0].Precio.charAt(4) != '$'
+                         && this.element[0].Precio.charAt(5)  != '$'  && this.element[0].Precio.charAt(6)  != '$'  && this.element[0].Precio.charAt(7) !== 'U' ){                    
                     this.normalArr.push({Marca:this.element[0].Marca, Descripcion: this.element[0].Descripcion, NormalPrice:this.element[0].Precio})
                     }
         }

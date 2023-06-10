@@ -8,11 +8,11 @@ describe('Get the page information',()=>{
     //     gntGlobalElements.typeSearchInput('Atun');  
     //     gntGlobalElements.clickSeeAllProducts();   
     // })
-    it('Store Atun products', ()=>{
+    it('Store Tuna products', ()=>{
         gntAtunPageElements.atunPage();
         cy.url().should('include', 'atun')
         gntStoreProducts.storeProducts( //get Products and await box
-        gntAtunPageElements.gntElements.eachBox(), 'not.be.null', 'not.be.empty')
+        gntAtunPageElements.gntElements.eachBox(),'Tuna')
     })
     it('Unify Arrays', ()=>{
         gntStoreProducts.unifyArrays('not.be.null', 'not.be.empty') //Umify all Arrays

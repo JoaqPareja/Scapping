@@ -6,7 +6,8 @@
       "baseUrl": "node_modules",
       "types": [
           "cypress",
-          "node"
+          "node",
+          "cypress-downloadfile"
       ],
       "strict": true,
       // "noImplicitAny": false

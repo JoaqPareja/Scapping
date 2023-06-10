@@ -12,7 +12,7 @@ describe('Get the page information',()=>{
         gntCoffePageElements.coffeePage();
         cy.url().should('include', 'cafe')
         gntStoreProducts.storeProducts( //get Products
-        gntCoffePageElements.gntElements.eachBox(), 'not.be.null', 'not.be.empty')
+        gntCoffePageElements.gntElements.eachBox(), 'Coffe')
     })
     it('Unify Arrays', ()=>{
         gntStoreProducts.unifyArrays('not.be.null', 'not.be.empty') //Umify all Arrays

@@ -17,6 +17,9 @@ export const dvtDeConstructCoffePage = new DvtDeConstructCoffeePage();
 import GntGlobalElements from "./gnt/001.pageElements/globalElements/004.gntGlobalElements";
 export const gntGlobalElements = new GntGlobalElements();
 
+import SpecificPageElements from "../SuperMarkets/gnt/001.pageElements/specificPageElements/001.specificPageElements"
+export const specificPageElements = new SpecificPageElements();
+
 //Creating specific object from Specific Atun elements class
 import AtunPage from "./gnt/002.productsPages/atunPage/atunPage"
 export const gntAtunPageElements = new AtunPage();
