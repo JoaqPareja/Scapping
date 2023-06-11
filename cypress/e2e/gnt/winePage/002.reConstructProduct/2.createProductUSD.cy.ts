@@ -4,16 +4,16 @@ import {gntWinePageElements,gntReConstructWinePage} from '../../../../support/Pa
 describe('Construct USD Prices',()=>{
     let arrayTepm:any;
     beforeEach('Get products',()=>{
-        gntReConstructWinePage.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
+        gntReConstructWinePage.readfile('not.be.empty', 'not.be.null'); 
         cy.readFile(gntWinePageElements.gntNewJson).then((data:any)=>{
             arrayTepm= data
         })  
     })
-    it('reCreateProduct',()=>{ 
-        cy.reCreateProduct(gntReConstructWinePage.productBrand, gntReConstructWinePage.elements, gntReConstructWinePage.titleProduct, 
-            gntReConstructWinePage.priceProduct, gntReConstructWinePage.arrayCoffeeListArray)
-                            cy.wrap(gntReConstructWinePage.arrayCoffeeListArray).should('not.be.empty')
-                        })
+    // it('reCreateProduct',()=>{ 
+    //     cy.reCreateProduct(gntReConstructWinePage.productBrand, gntReConstructWinePage.elements, gntReConstructWinePage.titleProduct, 
+    //         gntReConstructWinePage.priceProduct, gntReConstructWinePage.directory,gntReConstructWinePage.arrayCoffeeListArray)
+    //                         cy.wrap(gntReConstructWinePage.arrayCoffeeListArray).should('not.be.empty')
+    //                     })
     it('Get the USD prices', ()=>{
         gntReConstructWinePage.createUSDPrices();
     })

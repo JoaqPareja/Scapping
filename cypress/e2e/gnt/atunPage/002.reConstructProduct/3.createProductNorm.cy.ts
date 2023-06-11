@@ -4,17 +4,17 @@ import {gntAtunPageElements, gntReConstructAtunPage} from '../../../../support/P
 describe('Construct normal',()=>{ 
     let arrayTepm:Array<string>=[];
     beforeEach('Get products',()=>{
-        gntReConstructAtunPage.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
+        gntReConstructAtunPage.readfile('not.be.empty', 'not.be.null'); 
     cy.readFile(gntAtunPageElements.gntNewJson).then((data)=>{
         arrayTepm =data;
         
     })
 })
-it('reCreateProduct',()=>{ 
-    cy.reCreateProduct(gntReConstructAtunPage.productBrand, gntReConstructAtunPage.elements, gntReConstructAtunPage.titleProduct, 
-        gntReConstructAtunPage.priceProduct, gntReConstructAtunPage.arrayCoffeeListArray)
-                        cy.wrap(gntReConstructAtunPage.arrayCoffeeListArray).should('not.be.empty')
-                    })
+// it('reCreateProduct',()=>{ 
+//     cy.reCreateProduct(gntReConstructAtunPage.productBrand, gntReConstructAtunPage.elements, gntReConstructAtunPage.titleProduct, 
+//         gntReConstructAtunPage.priceProduct, gntReConstructAtunPage.directory,gntReConstructAtunPage.arrayCoffeeListArray)
+//                         cy.wrap(gntReConstructAtunPage.arrayCoffeeListArray).should('not.be.empty')
+//                     })
 it('Construct the Array and check Marca',()=>{
     gntReConstructAtunPage.createNormalPrices();
     cy.wrap(gntReConstructAtunPage.normalArr).each((txt:any)=>{

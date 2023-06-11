@@ -3,11 +3,12 @@ import {gntWinePageElements,gntReConstructWinePage} from '../../../../support/Pa
 
 describe('Re convert products Check normal and santander prices',()=>{
     beforeEach('Get products',()=>{
-        gntReConstructWinePage.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
+        gntReConstructWinePage.readfile('not.be.empty', 'not.be.null') 
     })
     it('reCreateProduct',()=>{ 
             cy.reCreateProduct(gntReConstructWinePage.productBrand, gntReConstructWinePage.elements, 
-                gntReConstructWinePage.titleProduct, gntReConstructWinePage.priceProduct, gntReConstructWinePage.arrayCoffeeListArray)
+                gntReConstructWinePage.titleProduct, gntReConstructWinePage.priceProduct, 
+                gntReConstructWinePage.directory ,gntReConstructWinePage.arrayCoffeeListArray)
             cy.wrap(gntReConstructWinePage.arrayCoffeeListArray).should('not.be.empty')
         })
         it('convert array of normal prices and santander prices',()=>{

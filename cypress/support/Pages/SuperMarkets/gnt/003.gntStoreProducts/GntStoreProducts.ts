@@ -36,7 +36,7 @@
               this.currentnumber = this.currentnumber +1;
               this.currentImagProduct = `${callbackName}${this.currentnumber}`
               cy.downloadFile(currentImg,`cypress/downloads/${callbackName}Downloads`,`${this.currentImagProduct}.jpg`)
-              this.imgsDirectories.push({currentImgProduct: this.currentImagProduct, directory: `cypress/downloads/${callbackName}Downloads/${this.currentImagProduct}.jpg`})
+              this.imgsDirectories.push( `cypress/downloads/${callbackName}Downloads/${this.currentImagProduct}.jpg`)
             })    
             // cy.wrap(this.imgsDirectories).pause()
 }

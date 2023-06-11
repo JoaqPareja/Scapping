@@ -4,17 +4,17 @@ import {gntWinePageElements,gntReConstructWinePage} from '../../../../support/Pa
 describe('Construct normal',()=>{ 
     let arrayTepm:Array<string>=[];
     beforeEach('Get products',()=>{
-        gntReConstructWinePage.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
+        gntReConstructWinePage.readfile('not.be.empty', 'not.be.null'); 
     cy.readFile(gntWinePageElements.gntNewJson).then((data)=>{
         arrayTepm =data;
         
     })
 })
-it('reCreateProduct',()=>{ 
-    cy.reCreateProduct(gntReConstructWinePage.productBrand, gntReConstructWinePage.elements, gntReConstructWinePage.titleProduct, 
-        gntReConstructWinePage.priceProduct, gntReConstructWinePage.arrayCoffeeListArray)
-                        cy.wrap(gntReConstructWinePage.arrayCoffeeListArray).should('not.be.empty')
-                    })
+// it('reCreateProduct',()=>{ 
+//     cy.reCreateProduct(gntReConstructWinePage.productBrand, gntReConstructWinePage.elements, gntReConstructWinePage.titleProduct, 
+//         gntReConstructWinePage.priceProduct, gntReConstructWinePage.directory,gntReConstructWinePage.arrayCoffeeListArray)
+//                         cy.wrap(gntReConstructWinePage.arrayCoffeeListArray).should('not.be.empty')
+//                     })
 it('Construct the Array and check Marca',()=>{
     gntReConstructWinePage.createNormalPrices();
     cy.wrap(gntReConstructWinePage.normalArr).each((txt:any)=>{

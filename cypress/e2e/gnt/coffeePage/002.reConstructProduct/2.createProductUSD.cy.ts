@@ -5,7 +5,7 @@ describe('Construct USD Prices',()=>{
     let arrayTepm:any;
     beforeEach('Get products',()=>{
         
-        gntReConstructCoffeProducts.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
+        gntReConstructCoffeProducts.readfile('not.be.empty', 'not.be.null'); 
         cy.readFile(gntCoffePageElements.gntNewJson).then((data:any)=>{
             arrayTepm= data
             // arrayTepm = data;
@@ -17,13 +17,13 @@ describe('Construct USD Prices',()=>{
         })
        
     })
-    it('reCreateProduct',()=>{ 
-        
-        // JSON.parse(arrayTepm);
-        cy.reCreateProduct(gntReConstructCoffeProducts.productBrand, gntReConstructCoffeProducts.elements, gntReConstructCoffeProducts.titleProduct, 
-            gntReConstructCoffeProducts.priceProduct, gntReConstructCoffeProducts.arrayCoffeeListArray)
-                            cy.wrap(gntReConstructCoffeProducts.arrayCoffeeListArray).should('not.be.empty')
-                        })
+    // it('reCreateProduct',()=>{ 
+    //     cy.reCreateProduct(gntReConstructCoffeProducts.productBrand, gntReConstructCoffeProducts.elements, 
+    //         gntReConstructCoffeProducts.titleProduct, gntReConstructCoffeProducts.priceProduct, 
+    //         gntReConstructCoffeProducts.directory,gntReConstructCoffeProducts.arrayCoffeeListArray )
+    //     cy.wrap(gntReConstructCoffeProducts.arrayCoffeeListArray).should('not.be.empty')
+    //                         cy.wrap(gntReConstructCoffeProducts.arrayCoffeeListArray).should('not.be.empty')
+    //                     })
     it('Get the USD prices', ()=>{
         gntReConstructCoffeProducts.createUSDPrices();
     })

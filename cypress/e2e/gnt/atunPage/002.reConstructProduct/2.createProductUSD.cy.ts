@@ -5,7 +5,7 @@ describe('Construct USD Prices',()=>{
     let arrayTepm:any;
     beforeEach('Get products',()=>{
         
-        gntReConstructAtunPage.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
+        gntReConstructAtunPage.readfile('not.be.empty', 'not.be.null'); 
         cy.readFile(gntAtunPageElements.gntNewJson).then((data:any)=>{
             arrayTepm= data
             // arrayTepm = data;
@@ -17,13 +17,12 @@ describe('Construct USD Prices',()=>{
         })
        
     })
-    it('reCreateProduct',()=>{ 
-        
-        // JSON.parse(arrayTepm);
-        cy.reCreateProduct(gntReConstructAtunPage.productBrand, gntReConstructAtunPage.elements, gntReConstructAtunPage.titleProduct, 
-            gntReConstructAtunPage.priceProduct, gntReConstructAtunPage.arrayCoffeeListArray)
-                            cy.wrap(gntReConstructAtunPage.arrayCoffeeListArray).should('not.be.empty')
-                        })
+    // it('reCreateProduct',()=>{ 
+    //     // JSON.parse(arrayTepm);
+    //     cy.reCreateProduct(gntReConstructAtunPage.productBrand, gntReConstructAtunPage.elements, gntReConstructAtunPage.titleProduct, 
+    //         gntReConstructAtunPage.priceProduct, gntReConstructAtunPage.arrayOfdirectory,gntReConstructAtunPage.arrayCoffeeListArray)
+    //                         cy.wrap(gntReConstructAtunPage.arrayCoffeeListArray).should('not.be.empty')
+    //                     })
     it('Get the USD prices', ()=>{
         gntReConstructAtunPage.createUSDPrices();
     })

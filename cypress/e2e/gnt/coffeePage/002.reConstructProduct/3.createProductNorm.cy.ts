@@ -4,17 +4,19 @@ import {gntCoffePageElements,gntReConstructCoffeProducts} from '../../../../supp
 describe('Construct normal',()=>{ 
     let arrayTepm:Array<string>=[];
     beforeEach('Get products',()=>{
-        gntReConstructCoffeProducts.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
+        gntReConstructCoffeProducts.readfile('not.be.empty', 'not.be.null');
     cy.readFile(gntCoffePageElements.gntNewJson).then((data)=>{
         arrayTepm =data;
         
     })
 })
-it('reCreateProduct',()=>{ 
-    cy.reCreateProduct(gntReConstructCoffeProducts.productBrand, gntReConstructCoffeProducts.elements, gntReConstructCoffeProducts.titleProduct, 
-        gntReConstructCoffeProducts.priceProduct, gntReConstructCoffeProducts.arrayCoffeeListArray)
-                        cy.wrap(gntReConstructCoffeProducts.arrayCoffeeListArray).should('not.be.empty')
-                    })
+// it('reCreateProduct',()=>{ 
+//     cy.reCreateProduct(gntReConstructCoffeProducts.productBrand, gntReConstructCoffeProducts.elements, 
+//         gntReConstructCoffeProducts.titleProduct, gntReConstructCoffeProducts.priceProduct, 
+//         gntReConstructCoffeProducts.directory,gntReConstructCoffeProducts.arrayCoffeeListArray )
+//     cy.wrap(gntReConstructCoffeProducts.arrayCoffeeListArray).should('not.be.empty')
+//                         cy.wrap(gntReConstructCoffeProducts.arrayCoffeeListArray).should('not.be.empty')
+//                     })
 it('Construct the Array and check Marca',()=>{
     gntReConstructCoffeProducts.createNormalPrices();
     cy.wrap(gntReConstructCoffeProducts.normalArr).each((txt:any)=>{

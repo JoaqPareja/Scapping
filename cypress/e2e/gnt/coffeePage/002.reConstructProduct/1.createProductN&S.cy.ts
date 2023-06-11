@@ -3,11 +3,12 @@ import {gntCoffePageElements,gntReConstructCoffeProducts} from '../../../../supp
 
 describe('Re convert products Check normal and santander prices',()=>{
     beforeEach('Get products',()=>{
-        gntReConstructCoffeProducts.readfile('not.be.empty', 'not.be.empty',  'not.be.empty', 'not.be.empty') 
+        gntReConstructCoffeProducts.readfile('not.be.empty', 'not.be.null') 
     })
     it('reCreateProduct',()=>{ 
             cy.reCreateProduct(gntReConstructCoffeProducts.productBrand, gntReConstructCoffeProducts.elements, 
-                gntReConstructCoffeProducts.titleProduct, gntReConstructCoffeProducts.priceProduct, gntReConstructCoffeProducts.arrayCoffeeListArray)
+                gntReConstructCoffeProducts.titleProduct, gntReConstructCoffeProducts.priceProduct, 
+                gntReConstructCoffeProducts.directory,gntReConstructCoffeProducts.arrayCoffeeListArray )
             cy.wrap(gntReConstructCoffeProducts.arrayCoffeeListArray).should('not.be.empty')
         })
         it('convert array of normal prices and santander prices',()=>{
