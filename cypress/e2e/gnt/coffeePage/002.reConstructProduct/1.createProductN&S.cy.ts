@@ -12,8 +12,7 @@ describe('Re convert products Check normal and santander prices',()=>{
             cy.wrap(gntReConstructCoffeProducts.arrayCoffeeListArray).should('not.be.empty')
         })
         it('convert array of normal prices and santander prices',()=>{
-            gntReConstructCoffeProducts.createArrNormalAndSantanderPrices();
-           
+            gntReConstructCoffeProducts.createArrNormalAndSantanderPrices();           
         })
         it('Check Marca',()=>{
                      cy.wrap(gntReConstructCoffeProducts.arrayOfPrecios).each((txt:any)=>{   

@@ -7,8 +7,8 @@ describe('Construct USD Prices',()=>{
         
         gntReConstructCoffeProducts.readfile('not.be.empty', 'not.be.null'); 
         cy.readFile(gntCoffePageElements.gntNewJson).then((data:any)=>{
-            arrayTepm= data
-            // arrayTepm = data;
+            // arrayTepm= data;
+            arrayTepm = data;
             // cy.wrap(arrayTepm).each((txt)=>{
             //     cy.wrap(txt).pause()
             //     // cy.wrap(txt[3]).pause()
@@ -17,13 +17,13 @@ describe('Construct USD Prices',()=>{
         })
        
     })
-    // it('reCreateProduct',()=>{ 
-    //     cy.reCreateProduct(gntReConstructCoffeProducts.productBrand, gntReConstructCoffeProducts.elements, 
-    //         gntReConstructCoffeProducts.titleProduct, gntReConstructCoffeProducts.priceProduct, 
-    //         gntReConstructCoffeProducts.directory,gntReConstructCoffeProducts.arrayCoffeeListArray )
-    //     cy.wrap(gntReConstructCoffeProducts.arrayCoffeeListArray).should('not.be.empty')
-    //                         cy.wrap(gntReConstructCoffeProducts.arrayCoffeeListArray).should('not.be.empty')
-    //                     })
+    it('reCreateProduct',()=>{ 
+        cy.reCreateProduct(gntReConstructCoffeProducts.productBrand, gntReConstructCoffeProducts.elements, 
+            gntReConstructCoffeProducts.titleProduct, gntReConstructCoffeProducts.priceProduct, 
+            gntReConstructCoffeProducts.directory,gntReConstructCoffeProducts.arrayCoffeeListArray )
+        cy.wrap(gntReConstructCoffeProducts.arrayCoffeeListArray).should('not.be.empty')
+                            // cy.wrap(gntReConstructCoffeProducts.arrayCoffeeListArray).should('not.be.empty')
+                        })
     it('Get the USD prices', ()=>{
         gntReConstructCoffeProducts.createUSDPrices();
     })
@@ -61,7 +61,7 @@ describe('Construct USD Prices',()=>{
     })
     })
     it('Unify arrays',()=>{
-        gntReConstructCoffeProducts.unifyArrays(arrayTepm, gntReConstructCoffeProducts.arrayOfUSDPrecios, )
+        gntReConstructCoffeProducts.unifyArrays(arrayTepm, gntReConstructCoffeProducts.arrayOfUSDPrecios )
     })
   
     it('Push Arrs',()=>{
@@ -70,4 +70,5 @@ describe('Construct USD Prices',()=>{
         gntReConstructCoffeProducts.readJson(gntCoffePageElements.gntNewJson, 'not.be.empty')
     })
 })
+
 

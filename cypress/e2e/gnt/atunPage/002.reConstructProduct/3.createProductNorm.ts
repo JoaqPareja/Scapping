@@ -8,13 +8,13 @@ describe('Construct normal',()=>{
     cy.readFile(gntAtunPageElements.gntNewJson).then((data)=>{
         arrayTepm =data;
         
-    })
 })
-// it('reCreateProduct',()=>{ 
-//     cy.reCreateProduct(gntReConstructAtunPage.productBrand, gntReConstructAtunPage.elements, gntReConstructAtunPage.titleProduct, 
-//         gntReConstructAtunPage.priceProduct, gntReConstructAtunPage.directory,gntReConstructAtunPage.arrayCoffeeListArray)
-//                         cy.wrap(gntReConstructAtunPage.arrayCoffeeListArray).should('not.be.empty')
-//                     })
+}) 
+it('reCreateProduct',()=>{ 
+    cy.reCreateProduct(gntReConstructAtunPage.productBrand, gntReConstructAtunPage.elements, gntReConstructAtunPage.titleProduct, 
+        gntReConstructAtunPage.priceProduct, gntReConstructAtunPage.directory,gntReConstructAtunPage.arrayCoffeeListArray)
+                        cy.wrap(gntReConstructAtunPage.arrayCoffeeListArray).should('not.be.empty')
+                    })
 it('Construct the Array and check Marca',()=>{
     gntReConstructAtunPage.createNormalPrices();
     cy.wrap(gntReConstructAtunPage.normalArr).each((txt:any)=>{
